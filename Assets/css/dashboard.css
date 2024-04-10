@@ -1,0 +1,54 @@
+:root{
+    --white: #c8ccd6;
+    --white2: #acbae1;
+    --text: #010101;
+
+    --rosewater: #f2d5cf;
+    --flamingo:  #eebebe;
+    --pink:      #f4b8e4; 
+    --mauve:     #ca9ee6;
+    --red: 	     #e78284;
+    --maroon:    #ea999c;
+    --peach: 	 #ef9f76;
+    --yellow:    #e5c890;
+    --green: 	 #a6d189;
+    --teal: 	 #81c8be;
+    --sky: 	     #99d1db;
+    --sapphire:  #85c1dc;
+    --blue: 	 #8caaee;
+    --lavender:  #babbf1;
+}
+
+.panel{
+    background-color: var(--green);
+    padding: 20px;
+    margin-bottom: 15px;
+}
+.dashboard{
+    display: flex;
+    color: white;
+    background-color: var(--white2);
+    .profile{
+        background-color: var(--white);
+        width: 30%;
+        .profilepicture{
+            display:flex;
+            height: 100px;  width: 100px;     
+            margin: auto;
+        }
+        .profileabout{
+            color: black;
+            text-align:center;
+        }
+        
+    }
+    .client-card{
+        width: 70%; 
+        color: black;
+        .card{
+            background-color: whitesmoke;
+        }
+    }
+    
+}
+
