@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #000000;
+    --primario_barra:	aquamarine;	
+    --botones:	pink;
+    --grisclaro:	#727272;
+    --rosaClaro: #895486;
+}
+body{
+    margin: 0%;
+}
+.encabezado{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: aquamarine;
+    .image{
+        grid-column: 1/2;
+        align-items: start;
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+header{
+    grid-column: 2/3;
+    .centrar{
+        text-align: center;
+    }
+}

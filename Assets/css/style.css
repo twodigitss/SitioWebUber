@@ -41,18 +41,22 @@ header{
 }
 .boton{
     grid-column: 5/6;
-    grid-row: 3;
-    padding:0rem 1rem;
+    grid-row: 2;
+    a{
+        margin-top: 9rem;
+        background-color: #b657bd;
+        display: block;
+        width: 15rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding: 1rem;
+        transition: background-color 0.3s ease-out;
+        text-align: center;
+    }
 }
-.button{
-    background-color: var(--botones);
-    border: none;
-    color: var(--blanco);
-    padding: 1rem;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    width: 12rem;
+.boton a:hover{
+    background-color: #7d1285;
 }
 .img2{
     grid-column: 1/4;
