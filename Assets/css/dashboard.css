@@ -25,9 +25,11 @@
     font-weight: 400;
     font-style: normal;
 }  
+
 body{
-    margin 0%
-}
+    margin: 0%;
+} /*agregue este body para que la pagina este desde el punto 0 para asi quede bien la barra de titulo xD att:your luis <3*/
+
 .panel{
     font-family: "Fira Sans", sans-serif;
     font-size: 20px; font-weight: 500;
