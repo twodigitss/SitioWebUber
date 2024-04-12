@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #000000;
+    --primario_barra:	aquamarine;	
+    --botones:	pink;
+    --grisclaro:	#727272;
+    --rosaClaro: #895486;
+}
+body{
+    margin: 0%;
+}
+.encabezado{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: aquamarine;
+}
+.image{
+    grid-column: 1/2;
+    align-items: start;
+    width: 5rem;
+    height: 5rem;
+}
+header{
+    grid-column: 2/3;
+}
+.centrar{
+    text-align: center;
+}
+.login{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-size: 100%, 80rem;
+}
+.registro{
+    grid-column: 5/6;
+    grid-row: 2;
+    padding: 2rem;
+}
+.boton{
+    grid-column: 5/6;
+    grid-row: 3;
+    padding:0rem 1rem;
+}
+.button{
+    background-color: var(--botones);
+    border: none;
+    color: var(--blanco);
+    padding: 1rem;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 12rem;
+}
+.img2{
+    grid-column: 1/4;
+    grid-row: 1/6;
+}
+.img{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 75rem;
+    height: 34rem;
+}
