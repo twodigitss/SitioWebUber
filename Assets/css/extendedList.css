@@ -1,0 +1,86 @@
+:root{
+    /*DEFAULT TWEAKS*/
+    --white: #f1f1f1;
+    --whiter: #fafafa;
+    --text: #010101;  
+    /*GRUVBOX COLORSCHEME*/
+    --aqua: #689D6A;
+    /*CATPUCCIN LATE COLORSCHEME*/
+    --ajisai: #A39EC4;
+    --sakura: #C49EC4;
+    --sora: #9EC3C4;
+    --kusa: #9EC49F;
+    --kori: #A5B4CB;
+
+    /*DARKMODE*/
+    --matteblack: #171717;  
+    --textDM: #f1f1f1;  
+    /*LIGHTMODE*/
+    --col_main: var(--aqua);
+    --roundcor: 0px;
+    
+}
+.fira-sans-regular {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.panel{
+    font-family: "Fira Sans", sans-serif;
+    font-size: 20px; font-weight: 500;
+
+    background-color: var(--col_main);
+    padding-left: 20px; margin-bottom: 20px;
+    display: flex; align-items: center;
+    height: 50px;
+    
+    border: #010101; border-width: 0px; 
+    border-radius: 5px; border-style: solid;/**/
+
+    img{ height: 30px; width: 30px; }
+    
+    .title{
+        padding-left: 10px;
+        color: var(--text);
+        text-align: center; 
+        align-items: center;
+    }
+    
+}
+.mainBody{
+    font-family: "Fira Sans", sans-serif;
+    display: flex;
+    .extendedRegList{
+        background-color: var(--white);
+        width: 70%; height: 600px;
+        margin: 10px; border-radius: 10px;
+        .card{
+            background-color: var(--whiter);
+            height: 50px; width: 97%;
+            margin: 10px;
+
+            box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3); /* Add shadow */
+            border: #010101; border-width: 1px; 
+            border-radius: var(--roundcor); border-style: solid;/**/
+            
+            .card_head{ 
+                display:block; 
+                text-align: left;
+                padding-left: 100px;
+
+                height: 70%;
+                .image{padding-left: 30px;}
+                    
+                
+            }
+            
+        }
+    }
+    .searchAndFilters{
+        background-color: var(--white);
+        width: 30%; height: 600px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+}

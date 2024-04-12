@@ -1,58 +1,131 @@
 :root{
-    --white: #c8ccd6;
-    --white2: #acbae1;
-    --text: #010101;
+    /*DEFAULT TWEAKS*/
+    --white: #f1f1f1;
+    --whiter: #f1f1f1;
+    --text: #010101;  
+    /*GRUVBOX COLORSCHEME*/
+    --aqua: #689D6A;
+    /*CATPUCCIN LATE COLORSCHEME*/
+    --ajisai: #A39EC4;
+    --sakura: #C49EC4;
+    --sora: #9EC3C4;
+    --kusa: #9EC49F;
+    --kori: #A5B4CB;
 
-    --rosewater: #f2d5cf;
-    --flamingo:  #eebebe;
-    --pink:      #f4b8e4; 
-    --mauve:     #ca9ee6;
-    --red: 	     #e78284;
-    --maroon:    #ea999c;
-    --peach: 	 #ef9f76;
-    --yellow:    #e5c890;
-    --green: 	 #a6d189;
-    --teal: 	 #81c8be;
-    --sky: 	     #99d1db;
-    --sapphire:  #85c1dc;
-    --blue: 	 #8caaee;
-    --lavender:  #babbf1;
+    /*DARKMODE*/
+    --matteblack: #171717;  
+    --textDM: #f1f1f1;  
+    /*LIGHTMODE*/
+    --col_main: var(--aqua);
+    --roundcor: 0px;
+    
 }
-
+.fira-sans-regular {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
 body{
-    margin: 0%;
-} /*agregue este body para que la pagina este desde el punto 0 para asi quede bien la barra de titulo xD att:your luis <3*/
-
-.panel{
-    background-color: var(--green);
-    padding: 20px;
-    margin-bottom: 15px;
+    margin 0%
 }
+.panel{
+    font-family: "Fira Sans", sans-serif;
+    font-size: 20px; font-weight: 500;
+
+    background-color: var(--col_main);
+    padding-left: 20px; margin-bottom: 20px;
+    display: flex; align-items: center;
+    height: 50px;
+    
+    border: #010101; border-width: 0px; 
+    border-radius: 5px; border-style: solid;/**/
+
+    img{ height: 30px; width: 30px; }
+    
+    .title{
+        padding-left: 10px;
+        color: var(--text);
+        text-align: center; 
+        align-items: center;
+    }
+    
+}
+
 .dashboard{
+    font-family: "Fira Sans", sans-serif;
+    background-color: var(white);
     display: flex;
-    color: white;
-    background-color: var(--white2);
+    
     .profile{
+        width: 30%; height: 100%;
         background-color: var(--white);
-        width: 30%;
+        border-radius: 10px;
         .profilepicture{
-            display:flex;
-            height: 100px;  width: 100px;     
-            margin: auto;
+            display:flex; justify-content: center;
+            margin: auto; padding: 15px;
+            
+            img{ /*HERE GOES THE MAIN PROFILE PICTURE*/
+                 
+                /*border: #010101; border-width: 1px; 
+                border-radius: 5px; border-style: solid;
+                box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3);  /* Add shadow */
+                
+                border-radius: 50%;/**/
+                height: 200px; width: 200px;
+                
+            }/**/
         }
         .profileabout{
-            color: black;
-            text-align:center;
+            color: var(--text);
+            padding: 25px;
+            .centeredTitle{font-weight: 500; text-align:center;}
+            .normalParagraph{text-align:justify;}
         }
         
     }
-    .client-card{
-        width: 70%; 
-        color: black;
+
+    .client_Card{
+        display: flex; flex-wrap:wrap;
+        width: 70%; height: 100%;
+        margin-left: 10px;
+        color: var(--text);
+        img{ height: 40px; width: 40px; } /*For in-card pfp*/
+        
         .card{
-            background-color: whitesmoke;
+            background-color: var(--white);
+            height: 150px; width: 300px;
+            margin: 10px;
+
+            box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3); /* Add shadow */
+            border: #010101; border-width: 1px; 
+            border-radius: var(--roundcor); border-style: solid;/**/
+            
+            .card_head{ 
+                display:inline-flex; align-items: center;
+                height: 70%; 
+                .image{padding-left: 30px;}
+                .add_register_txt{ 
+                    text-align: left;
+                    padding: 20px; 
+                    font-size: 15px;
+                    
+                }
+                .existing_reg{
+                    text-align: left; 
+                    padding: 20px; 
+                    font-size: 15px;
+                }
+            }
+            .card_footer{
+                background-color: var(--col_main); color: var(--text);
+                font-size: 15px;
+                text-align: center; align-items:center;
+                display:grid;
+                height: 30%;
+                border-radius: 0px 0px var(--roundcor) var(--roundcor);
+            }
+            #plusSymbol{font-size: 25px;}
         }
-    }
-    
+    } 
 }
 
