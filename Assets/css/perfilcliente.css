@@ -9,7 +9,14 @@
     --rosaClaro: #895486;
 }
 body{
+    font-size: 62.5%;
     margin: 0%;
+}
+header{
+    grid-column: 2/3;
+    .centrar{
+        text-align: center;
+    }
 }
 .encabezado{
     display: grid;
@@ -22,10 +29,38 @@ body{
         height: 5rem;
     }
 }
-
-header{
+.menu-principal{
+    margin: 2rem 2rem 0% 2rem; /*arriba, derecha, abajo, izquierda*/
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.acomodo{
+    grid-column: 1/2;
+}
+.texto{
     grid-column: 2/3;
-    .centrar{
+    
+    .centrado{
         text-align: center;
     }
+}
+.botones{
+    grid-column: 3/4;
+}
+.botones a{
+    margin-right: 2rem;
+    background-color: #00ff11;
+    width: 10rem;
+    height: 2rem;
+    display: inline;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color 0.3s ease-out;
+}
+
+.botones a:hover{
+    background-color: #0cbc00;
 }
