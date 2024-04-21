@@ -93,7 +93,7 @@ header{
 
 .botones2{
     grid-column: 1/4;
-    text-align: center;
+    justify-content: space-between;
     margin-top: 2rem;
     a{
         text-decoration: none;
@@ -110,5 +110,27 @@ header{
     }
     a:hover{
         background-color: #0cbc00;
+    }
+}
+
+.tabla{
+    border: 2px var(--oscuro) solid;
+    margin: 0 auto;
+    td, th{
+        font-size: 3rem;
+        text-align: center;
+        width: 23rem;
+        height: 3rem;
+        border: 2px;
+        border-color: var(--oscuro);
+        border-style: solid;
+    }
+    th{
+        color:#fff;
+        background-color: #252525;
+    }
+    
+    tr:nth-child(odd) td{
+        background-color:#eee;
     }
 }
