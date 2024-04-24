@@ -12,10 +12,6 @@
     --kusa: #9EC49F;
     --kori: #A5B4CB;
 
-    /*DARKMODE*/
-    --matteblack: #171717;  
-    --textDM: #f1f1f1;  
-    /*LIGHTMODE*/
     --col_main: var(--aqua);
     --roundcor: 0px;
     
@@ -27,12 +23,13 @@
 }  
 
 body{
+    font-size: 62.5%;
     margin: 0%;
 } /*agregue este body para que la pagina este desde el punto 0 para asi quede bien la barra de titulo xD att:your luis <3*/
 
 .panel{
     font-family: "Fira Sans", sans-serif;
-    font-size: 20px; font-weight: 500;
+    font-size: 2rem; font-weight: 500;
 
     background-color: var(--col_main);
     padding-left: 20px; margin-bottom: 20px;
@@ -40,7 +37,7 @@ body{
     height: 50px;
     
     border: #010101; border-width: 0px; 
-    border-radius: 5px; border-style: solid;/**/
+    border-radius: 0px; border-style: solid;/**/
 
     img{ height: 30px; width: 30px; }
     
