@@ -1,11 +1,12 @@
 :root{
     /*DEFAULT TWEAKS*/
-    --white: #f1f1f1;
-    --whiter: #fafafa;
-    --text: #010101;  
-    /*GRUVBOX COLORSCHEME*/
-    --aqua: #689D6A;
-    /*CATPUCCIN LATE COLORSCHEME*/
+    --BGwhite: #f1f1f1;
+    --FGwhite: #fafafa;
+    --text_dark: #010101;  
+    --text_white: #ececec;  
+
+    --verde: #98c379;
+    /*MOUNTAIN FUJI COLORSCHEME*/
     --ajisai: #A39EC4;
     --sakura: #C49EC4;
     --sora: #9EC3C4;
@@ -49,17 +50,21 @@ body{
     
 }
 .mainBody{
+    backdrop-filter: brightness(30%);
+    background: url(../img/wall.jpg);
+
     font-family: "Fira Sans", sans-serif;
     display: flex;
+    height: 100%;
     
     .extendedRegList{
-        /*background-color: var(--white);*/
-        height: 600px; width: 70%;
+        /*background-color: var(--BGwhite);/**/
+        height: 100%; width: 70%;
 
         margin: 10px; 
         border-radius: 10px;
         .card{
-            background-color: var(--whiter);
+            background-color: var(--FGwhite);
             height: 50px; width: 100%;
             
             display: flex;
@@ -86,16 +91,19 @@ body{
             .card_body{
                 /*background-color: #A39EC4;/**/
                 height: 99%; width: 100%;
-
                 display: flex;
                 text-align: center;
                 justify-content: center;
             
                 p{font-size: 1rem;}
+                .asd{
+                    margin: 0 auto;
+                    height: 32px; width: 32px;
+                }
             
             }
             .card_tail{
-                background-color: var(--white);/**/
+                background-color: var(--BGwhite);/**/
                 border-radius: var(--roundcor);
                 height: 99%; width: 15%;
                 
@@ -111,7 +119,7 @@ body{
     }
 }
 .searchAndFilters{
-    background-color: var(--white);/**/
+    background-color: var(--BGwhite);/**/
     width: 30%; height: 500px;
     
     display: flex;
@@ -122,14 +130,14 @@ body{
     
 
     .mainSearchFrame{
-        background-color: var(--white);
+        background-color: var(--BGwhite);
         width: 100%;
 
         border-radius: var(--roundcor);
         border: 1px solid #010101;
         
         .searchbar{
-            /*background-color: var(--whiter);/**/
+            /*background-color: var(--FGwhite);/**/
             height: 40px;
             
             display: flex;
