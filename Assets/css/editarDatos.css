@@ -1,0 +1,126 @@
+body {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.cuadro {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 50px; /* Altura del rectángulo */
+    background-color: #24b348; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    font-size: 30px; /* Tamaño de la fuente */
+    line-height: 50px; /* Alineación vertical del texto */
+    text-align: center; /* Alineación horizontal del texto */
+}
+
+.titulo {
+    display: inline-block; /* Para que el ancho del contenedor se ajuste al texto */
+    margin-top:0px; /* Espacio entre el texto y el borde superior del cuadro */
+    text-align: center; /* Alineación horizontal del texto */
+}
+
+.editar-datos {
+    font-size: 25px; /* Tamaño del texto */
+    text-align: center; /* Alineación horizontal del texto */
+    margin-top: 20px; /* Espacio entre el texto y el rectángulo */
+}
+
+.casillaTexto {
+    text-align: center; /* Alineación horizontal del contenido */
+    margin-top: 10px; /* Espacio entre el texto y el campo de entrada */
+}
+
+.label {
+    font-size: 20px; /* Tamaño del texto */
+    text-align: center; /* Alineación horizontal del texto */
+    
+}
+
+.cuadroTexto {
+    width: 600px; /* Ancho del campo de entrada */
+    height: 30px; /* Altura del campo de entrada */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+
+.grid3{
+    display: grid;
+    grid-template-rows: 2;
+    margin: 0 auto;
+    margin-right: 1rem;
+}   
+
+
+.grid4{
+    display: grid;
+    grid-template-rows: 2;
+    margin: 0 auto;
+    margin-left: 1rem;
+}
+
+/* Estilos para las etiquetas "Edad" y "Sexo" */
+.contenedor label {
+    display: inline-block; /* Para que estén en la misma línea */
+    width: 100px; /* Ancho fijo para las etiquetas */
+    text-align: center; /* Alinear el texto a la derecha */
+}
+
+/* Estilos para las casillas de respuesta */
+.contenedor input[type="text"],
+.contenedor select {
+    width: 150px; /* Ancho fijo para las casillas */
+    margin-top: 5px; /* Espacio superior */
+}
+
+/* Estilos para el salto de página */
+.contenedor br {
+    display: block; /* Forzar el salto de línea */
+    margin-top: 10px; /* Espacio entre líneas */
+}
+
+.casillaEstado {
+    text-align: center; /* Alineación horizontal del contenido */
+    margin-top: 10px; /* Espacio entre el texto y el campo de entrada */
+}
+
+.seleccion{
+    text-align: center; /* Alineación horizontal del contenido */
+}
+
+.contenedorBotones{
+    display: flex;
+    justify-content: center; 
+}
+
+
+/* Estilos para los botones */
+.boton-finalizar,
+.boton-cancelar {
+    padding: 10px 20px; /* Padding interno */
+    margin: 0 10px; /* Margen entre botones */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+
+/* Estilos para el botón "Finalizar" */
+.boton-finalizar {
+    background-color: #28a745; /* Color de fondo verde */
+    color: black; /* Color del texto */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Estilos para el botón "Cancelar" */
+.boton-cancelar {
+    background-color: #dc3545; /* Color de fondo rojo */
+    color: black; /* Color del texto */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s; /* Transición suave */
+
+}
+
+/* Efecto de oscurecimiento al pasar el cursor sobre los botones */
+.boton-finalizar:hover,
+.boton-cancelar:hover {
+    filter: brightness(90%); /* Reduce el brillo al 90% */
+}
