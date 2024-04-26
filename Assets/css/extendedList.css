@@ -12,12 +12,8 @@
     --kusa: #9EC49F;
     --kori: #A5B4CB;
 
-    /*DARKMODE*/
-    --matteblack: #171717;  
-    --textDM: #f1f1f1;  
-    /*LIGHTMODE*/
-    --col_main: var(--aqua);
-    --roundcor: 0px;
+    --col_main: var(--kusa);
+    --roundcor: 10px;
     
 }
 .fira-sans-regular {
@@ -25,18 +21,22 @@
     font-weight: 400;
     font-style: normal;
 }  
+body{
+    font-size: 62.5%; 
+    margin: 0%;
+}
 
 .panel{
     font-family: "Fira Sans", sans-serif;
-    font-size: 20px; font-weight: 500;
+    font-size: 2rem; font-weight: 500;
 
     background-color: var(--col_main);
     padding-left: 20px; margin-bottom: 20px;
     display: flex; align-items: center;
     height: 50px;
     
-    border: #010101; border-width: 0px; 
-    border-radius: 5px; border-style: solid;/**/
+    border: 0px solid #010101; 
+    border-radius: 0px;
 
     img{ height: 30px; width: 30px; }
     
@@ -51,36 +51,98 @@
 .mainBody{
     font-family: "Fira Sans", sans-serif;
     display: flex;
+    
     .extendedRegList{
-        background-color: var(--white);
-        width: 70%; height: 600px;
-        margin: 10px; border-radius: 10px;
+        /*background-color: var(--white);*/
+        height: 600px; width: 70%;
+
+        margin: 10px; 
+        border-radius: 10px;
         .card{
             background-color: var(--whiter);
-            height: 50px; width: 97%;
-            margin: 10px;
-
-            box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3); /* Add shadow */
-            border: #010101; border-width: 1px; 
-            border-radius: var(--roundcor); border-style: solid;/**/
+            height: 50px; width: 100%;
             
-            .card_head{ 
-                display:block; 
-                text-align: left;
-                padding-left: 100px;
+            display: flex;
+            /*
+            display: grid;
+            grid-template-columns: repeat(3,1fr) ;/**/
 
-                height: 70%;
-                .image{padding-left: 30px;}
-                    
+            margin: 0px 0px 10px 0px; 
+            border: 1px solid #010101; 
+            border-radius: var(--roundcor);
+            box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3);
+
+            .card_head{
+                background-color: var(--col_main);/**/
+                height: 99%; width: 10%;
+
+                display: flex;
+                align-items:center;
+                justify-content: center;
+
+                border-radius: var(--roundcor);
                 
             }
+            .card_body{
+                /*background-color: #A39EC4;/**/
+                height: 99%; width: 100%;
+
+                display: flex;
+                text-align: center;
+                justify-content: center;
             
+                p{font-size: 1rem;}
+            
+            }
+            .card_tail{
+                background-color: var(--white);/**/
+                border-radius: var(--roundcor);
+                height: 99%; width: 15%;
+                
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                
+                img{padding: 0px 10px 0px 0px;}
+            }
+
         }
+            
     }
-    .searchAndFilters{
+}
+.searchAndFilters{
+    background-color: var(--white);/**/
+    width: 30%; height: 500px;
+    
+    display: flex;
+
+    margin: 10px 20px 0px 10px;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3);
+    border: 0px solid #010101;
+    
+
+    .mainSearchFrame{
         background-color: var(--white);
-        width: 30%; height: 600px;
-        margin: 10px;
-        border-radius: 10px;
+        width: 100%;
+
+        border-radius: var(--roundcor);
+        border: 1px solid #010101;
+        
+        .searchbar{
+            /*background-color: var(--whiter);/**/
+            height: 40px;
+            
+            display: flex;
+            align-items:center;
+            flex-direction: column;
+            
+            border: 0px solid #010101; 
+            margin: 20px;
+            /*p{margin: 0px;}/**/
+            .searchField{
+                height: 40px; width: 90%;
+                text-align: center;
+            }
+        }
     }
 }
