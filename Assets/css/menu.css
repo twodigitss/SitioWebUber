@@ -1,0 +1,47 @@
+/* Estilos generales para el menú hamburguesa */
+.menu-toggle {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  width: 25px;
+  background-color: black;
+  margin: 5px 5px;
+  transition: transform 0.3s, opacity 0.3s; /* Animación para el icono */
+}
+/* Estilos para el menú desplegable */
+.sidenav {
+  display: none; /* El menú está oculto por defecto */
+  position: absolute;
+  top: 40px; /* Ajusta según el tamaño del menú */
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  z-index: 1;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+}
+
+.sidenav a:hover {
+  background-color: #555;
+}
+
+/*Animaciones para el menú hamburguesa cuando está abierto */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

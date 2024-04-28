@@ -5,7 +5,7 @@
     --oscuro: #000000;
     --primario_barra:	aquamarine;	
     --botones:	pink;
-    --grisclaro:	#727272;
+    --grisclaro:	#9a9898;
     --rosaClaro: #895486;
 }
 body{
@@ -33,19 +33,7 @@ header{
         height: 5rem;
     }
 }
-.nav-bg{
-    background-color: var(--secundario_menu);
-}
 
-.navegacion-principal{
-    display: flex;
-    flex-direction: row;
-}
-.nav-bg a{
-    font-size: 3rem;
-    text-decoration: none;
-    color: var(--oscuro);
-}
 .menu-principal{
     margin: 2rem 2rem 0% 2rem; /*arriba, derecha, abajo, izquierda*/
     height: 550px;
