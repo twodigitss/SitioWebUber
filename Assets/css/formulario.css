@@ -17,6 +17,7 @@ body {
 }
 
 .contenedor-campos{
+    text-align: center;
     padding-bottom: 500px;
     width: 100%;
 }

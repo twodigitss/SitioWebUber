@@ -57,23 +57,22 @@ header{
     }
 }
 .grid-two-column{
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
     text-align: center;
-    grid-template-columns: repeat(2, 1fr);
-    .modificar{
-        grid-column: 1/2;
-    }
-    .eliminar{
-        grid-column: 2/3;
-    }
 }
 .botones{
+    display: flex;
+    width: 100%;
     a{  
+        margin: 0 auto;
+        text-align: center;
+        width: 15rem;
+        height: 1rem;
+        font-size: 1.2rem;
         text-decoration: none;
         background-color: #00ff11;
-        width: 10rem;
-        height: 2rem;
-        display: inline;
         color: #fff;
         text-transform: uppercase;
         font-weight: 900;
@@ -87,16 +86,15 @@ header{
 .grid-three-column{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
     text-align: center;
 }
 
 .botones2{
     display: flex;
-    width: 50%;
-    margin: 0 auto;
+    width: 100%;
+    gap: 3rem;
     a{
-        margin:0 auto;
+        
         text-align: center;
         width: 15rem;
         font-size: 1.2rem;
@@ -111,4 +109,5 @@ header{
     a:hover{
         background-color: #0cbc00;
     }
+    justify-content: center;
 }
