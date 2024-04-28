@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/css/formulario.css">
+    <title>Info. Paciente</title>
+</head>
+<body>
+    <header class="barrasuperior"> 
+        <img src="Assets/img/hamburguermenu.jpg">
+        <p class="title">Healthsync</p> 
+    </header>
+    <main>      
+        <section>
+            <h2>AGREGAR PACIENTE</h2>
+            <div class="contenedor-campos">
+                <form class="formulario">       
+                    <div class="campo">
+                        <label>Nombre: </label>
+                        <input class="input-text" type="text" >
+                    </div>
+                    <div class="campo">              
+                        <!--Dar el mismo name a ambos radios nos ayuda a que solo se seleccione una opcion ;)-->
+                        <legend>Sexo: </legend>
+                        <input type="radio" id="hombre" name="sexo" value="hombre"/>
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" id="mujer" name="sexo" value="mujer"/>
+                        <label for="mujer">Mujer</label>
+                    </div>
+                    <div class="campo">
+                        <label>Edad: </label>
+                        <input class="input-text" type="integer" >
+                    </div>
+                    <div class="campo">
+                        <label>Fecha de nacimiento</label>
+                        <input type="date">
+                    </div>  
+                    <div class="campo">
+                        <label>Ocupación: </label>
+                        <input class="input-text" type="text" >
+                    </div>
+                    <div class="campo">
+                        <label>Estado civil: </label>
+                        <input class="input-text" type="text" >
+                    </div>        
+                    <div class="campo">
+                        <label>Telefono: </label>
+                        <input class="input-text" type="integer" >
+                    </div>
+                    <div class="campo">
+                        <label>Dirección: </label>
+                        <input class="input-text" type="text" >
+                    </div>
+                    <div class="boton">
+                        <input class="input-boton" value="Finalizado" type="button" >
+                    </div>    
+                    <div class="boton">
+                        <input class="input-boton" value="Cancelar" type="button" >
+                    </div>       
+                </form>   
+               
+            </div>
+           
+        </section>
+    </main>
+</body>
+</html>
