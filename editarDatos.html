@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthsync</title>
     <link rel="stylesheet" href="Assets/css/editarDatos.css">
+    <script src="Assets/javascript/DosDigitos.js"></script>
 </head>
 <body>
 
@@ -22,7 +23,7 @@
     <div class="casillaTexto">
         <label for="edad" class="label">Edad:</label>
         <br>
-        <input type="number" id="edad" class="cuadroTexto" placeholder="">
+        <input type="number" id="limited-number" oninput="limitInput(event)" class="cuadroTexto" min="0">
     </div>
 
     <div class="casillaTexto">

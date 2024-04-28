@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/css/formulario.css">
+    <script src="Assets/javascript/DosDigitos.js"></script>
     <title>Info. Paciente</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
                     </div>
                     <div class="campo">
                         <label>Edad: </label>
-                        <input class="input-text" type="integer" >
+                        <input class="input-text" type="number" id="limited-number" oninput="limitInput(event)" min="0" >
                     </div>
                     <div class="campo">
                         <label>Fecha de nacimiento</label>
