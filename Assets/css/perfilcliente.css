@@ -13,7 +13,6 @@ body{
     margin: 0%;
 }
 header{
-    grid-column: 2/3;
     .centrar{
         text-align: center;
     }
@@ -22,15 +21,27 @@ header{
     max-width: 120rem;
     margin: 0 auto;
 }
+
 .encabezado{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
     background-color: aquamarine;
-    .image{
-        grid-column: 1/2;
-        align-items: start;
-        width: 5rem;
-        height: 5rem;
+    align-items: center;
+    .parte1{
+        width: 5%;
+        text-align: center;
+        .image{
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+    .parte2{
+        text-align: center;
+        width: 5%;
+    }
+    .parte3{
+        width: 90%;
     }
 }
 

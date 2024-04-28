@@ -16,21 +16,27 @@
 .sidenav {
   display: none; /* El menú está oculto por defecto */
   position: absolute;
-  top: 40px; /* Ajusta según el tamaño del menú */
+  top: 3rem; /* Ajusta según el tamaño del menú */
   left: 0;
   background-color: #333;
   padding: 10px;
   z-index: 1;
+  height: 39.7rem;
+  width: 15rem;
 }
 
 .sidenav a {
+  justify-content: space-evenly;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: white;
   padding: 8px;
 }
 
 .sidenav a:hover {
-  background-color: #555;
+  background-color: #862929;
 }
 
 /*Animaciones para el menú hamburguesa cuando está abierto */
