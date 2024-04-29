@@ -3,7 +3,7 @@
 :root{
     --blanco: #ffffff;
     --oscuro: #000000;
-    --primario_barra:	aquamarine;	
+    --primario_barra:	#689d6a;	
     --botones:	pink;
     --grisclaro:	#9a9898;
     --rosaClaro: #895486;
@@ -26,6 +26,7 @@ header{
     display: flex;
     flex-direction: row;
     background-color: aquamarine;
+    height: 3.5rem;
     align-items: center;
     .parte1{
         width: 5%;
