@@ -5,6 +5,7 @@
     --text: #010101;  
     /*GRUVBOX COLORSCHEME*/
     --aqua: #689D6A;
+    --aqua2: #74ad76;
     /*CATPUCCIN LATE COLORSCHEME*/
     --ajisai: #A39EC4;
     --sakura: #C49EC4;
@@ -34,7 +35,7 @@ body{
     background-color: var(--col_main);
     padding-left: 20px; margin-bottom: 20px;
     display: flex; align-items: center;
-    height: 50px;
+    height: 3.5rem;
     
     border: #010101; border-width: 0px; 
     border-radius: 0px; border-style: solid;/**/
@@ -52,6 +53,7 @@ body{
 
 .dashboard{
     font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
     background-color: var(white);
     display: flex;
     

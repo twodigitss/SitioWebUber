@@ -4,14 +4,8 @@
     --FGwhite: #fafafa;
     --text_dark: #010101;  
     --text_white: #ececec;  
-
-    --verde: #98c379;
-    /*MOUNTAIN FUJI COLORSCHEME*/
-    --ajisai: #A39EC4;
-    --sakura: #C49EC4;
-    --sora: #9EC3C4;
-    --kusa: #9EC49F;
-    --kori: #A5B4CB;
+    /*GRUVBOX COLORSCHEME*/
+    --aqua: #689D6A;
 
     --col_main: var(--kusa);
     --roundcor: 10px;
@@ -34,7 +28,7 @@ body{
     background-color: var(--col_main);
     padding-left: 20px; margin-bottom: 20px;
     display: flex; align-items: center;
-    height: 50px;
+    height: 3.5rem;
     
     border: 0px solid #010101; 
     border-radius: 0px;
@@ -50,9 +44,6 @@ body{
     
 }
 .mainBody{
-    backdrop-filter: brightness(30%);
-    background: url(../img/wall.jpg);
-
     font-family: "Fira Sans", sans-serif;
     display: flex;
     height: 100%;
