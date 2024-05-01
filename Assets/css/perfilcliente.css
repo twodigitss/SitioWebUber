@@ -7,6 +7,16 @@
     --botones:	pink;
     --grisclaro:	#9a9898;
     --rosaClaro: #895486;
+    --bg: #FBF1C7;
+    --gray: #928374;
+    --red: #9D0006;
+    --green: #79740E;
+    --yellow: #B57614;
+    --blue: #076678;
+    --purple: #8F3F71;
+    --orange: #AF3A03;
+    --fg: #3C3836;
+    --gray2: #7C6F64;
 }
 body{
     font-size: 62.5%;
@@ -25,7 +35,7 @@ header{
 .encabezado{
     display: flex;
     flex-direction: row;
-    background-color: aquamarine;
+    background-color: var(--primario_barra);
     height: 3.5rem;
     align-items: center;
     .parte1{
@@ -85,7 +95,7 @@ header{
         height: 1rem;
         font-size: 1.2rem;
         text-decoration: none;
-        background-color: #00ff11;
+        background-color: var(--rosaClaro);
         color: #fff;
         text-transform: uppercase;
         font-weight: 900;
@@ -93,7 +103,7 @@ header{
         transition: background-color 0.3s ease-out;
     }
     a:hover{
-        background-color: #0cbc00;
+        background-color: var(--purple);
     }
 }
 .grid-three-column{
