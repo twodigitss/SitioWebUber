@@ -6,8 +6,7 @@
     --text_white: #ececec;  
     /*GRUVBOX COLORSCHEME*/
     --aqua: #689D6A;
-
-    --col_main: var(--kusa);
+    --col_main: var(--aqua);
     --roundcor: 10px;
     
 }
