@@ -1,19 +1,25 @@
 :root{
     /*DEFAULT TWEAKS*/
-    --white: #f1f1f1;
-    --whiter: #f1f1f1;
+    --BGwhite: #f1f1f1;
+    --FGwhite: #fafafa;
     --text: #010101;  
     /*GRUVBOX COLORSCHEME*/
     --aqua: #689d6a;
-    /*CATPUCCIN LATE COLORSCHEME*/
+
     --ajisai: #A39EC4;
     --sakura: #C49EC4;
+    --suna: #C4C19E;
+    --ichigo: #C49EA0;
+    --yuyake: #CEB188;
     --sora: #9EC3C4;
     --kusa: #9EC49F;
     --kori: #A5B4CB;
+    --amagumo: #4C4C4C;
+    --yukiFG: #F0F0F0;
 
     --col_main: var(--aqua);
-    --roundcor: 0px;
+    --col_sec: var(--aqua);
+    --roundcor: 5px;
     
 }
 .fira-sans-regular {
@@ -35,9 +41,9 @@ body{
     padding-left: 20px; margin-bottom: 20px;
     display: flex; align-items: center;
     height: 3.5rem;
-    
-    border: #010101; border-width: 0px; 
-    border-radius: 0px; border-style: solid;/**/
+
+    border: 0px solid #010101;
+    border-radius: 0px;
 
     img{ height: 30px; width: 30px; }
     
@@ -53,13 +59,18 @@ body{
 .dashboard{
     font-family: "Fira Sans", sans-serif;
     font-size: 1rem;
-    background-color: var(white);
     display: flex;
     
     .profile{
+        background-color: var(--BGwhite);
         width: 30%; height: 100%;
-        background-color: var(--white);
+        
+        margin-left: 15px;
         border-radius: 10px;
+        border: 0px solid #010101;
+        
+        box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3); /* Add shadow */
+
         .profilepicture{
             display:flex; justify-content: center;
             margin: auto; padding: 15px;
@@ -92,13 +103,13 @@ body{
         img{ height: 40px; width: 40px; } /*For in-card pfp*/
         
         .card{
-            background-color: var(--white);
+            background-color: var(--BGwhite);
             height: 150px; width: 300px;
-            margin: 10px;
+            margin:  0px 10px 10px 10px;
 
             box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3); /* Add shadow */
-            border: #010101; border-width: 1px; 
-            border-radius: var(--roundcor); border-style: solid;/**/
+            border: 0px solid #010101;
+            border-radius: var(--roundcor);
             
             .card_head{ 
                 display:inline-flex; align-items: center;
@@ -116,15 +127,30 @@ body{
                     font-size: 15px;
                 }
             }
-            .card_footer{
-                background-color: var(--col_main); color: var(--text);
-                font-size: 15px;
-                text-align: center; align-items:center;
-                display:grid;
-                height: 30%;
-                border-radius: 0px 0px var(--roundcor) var(--roundcor);
+            .plusSymbol{
+                text-decoration: none;
+                #plusSymbolChar{font-size: 30px;}
             }
-            #plusSymbol{font-size: 25px;}
+            .card_footer{
+                background-color: var(--col_sec); color: var(--text);            
+                height: 30%; width: 100%;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                border-radius: 0px 0px var(--roundcor) var(--roundcor);
+                
+                img{
+                    margin: 10px;
+                    background-color: none;
+                    width: 32px; height: 32px;
+                    
+                    
+                    
+                }
+            }
+            
         }
     } 
 }
