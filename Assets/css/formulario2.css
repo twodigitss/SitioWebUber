@@ -1,3 +1,8 @@
+:root{
+    --text: #010101;  
+    --aqua: #689d6a;
+    --col_main: var(--aqua);
+}
 .barrasuperior{
     font-family: "Fira Sans", sans-serif;
     font-size: 20px; font-weight: 500;
@@ -12,6 +17,41 @@
     border-radius: 0px; border-style: solid;
 
     img{ height: 30px; width: 30px; }
+}
+.fira-sans-regular {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+.panel{
+    font-family: "Fira Sans", sans-serif;
+    font-size: 2rem; font-weight: 500;
+    background-color: var(--col_main);
+    height: 3.5rem;
+    
+    display: flex; 
+    align-items: center;
+    padding: 0px 10px 0px 15px ;
+    margin-bottom: 10px;
+    border: 0px solid #010101;
+    border-radius: 0px;
+
+    img{ height: 30px; width: 30px; }
+    .parte2{
+        width: 4%;
+        background-color: none;
+    }
+    .textletras{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        .title{
+            padding-left: 10px;
+            color: var(--text);
+            text-align: center; 
+            align-items: center;
+        }
+    }
 }
     
 .formulario2{
