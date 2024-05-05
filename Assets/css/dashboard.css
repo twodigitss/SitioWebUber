@@ -121,7 +121,7 @@ body{
             
             .card_head{ 
                 display:inline-flex; align-items: center;
-                height: 70%; 
+                height: 70%; width: 100%; 
                 .image{padding-left: 30px;}
                 .add_register_txt{ 
                     text-align: left;
