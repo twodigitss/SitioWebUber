@@ -9,7 +9,7 @@
   height: 4px;
   width: 25px;
   background-color: black;
-  margin: 5px 5px;
+  margin: 5px 5px 0px 10px; /*xoxo LE <3*/
   transition: transform 0.3s, opacity 0.3s; /* Animación para el icono */
 }
 /* Estilos para el menú desplegable */
