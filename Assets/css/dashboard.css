@@ -37,7 +37,7 @@ body{
     font-family: "Fira Sans", sans-serif;
     font-size: 2rem; font-weight: 500;
     background-color: var(--col_main);
-    height: 3.5rem;
+    height: 3.5rem; width: 100%;
     
     display: flex; 
     align-items: center;
@@ -47,19 +47,15 @@ body{
     border-radius: 0px;
 
     img{ height: 30px; width: 30px; }
-    .parte2{
-        width: 4%;
-        background-color: none;
-    }
+    .parte2{width: 4%;}
     .textletras{
-        width: 90%;
-        align-items: center;
-        justify-content: center;
-        .title{
+        width: 85%;
+        .title{ height: 100%;
             padding-left: 10px;
             color: var(--text);
             text-align: center; 
             align-items: center;
+            margin: 0;
         }
     }
 }

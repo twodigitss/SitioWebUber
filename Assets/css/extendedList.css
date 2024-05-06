@@ -23,32 +23,37 @@ body{
 .panel{
     font-family: "Fira Sans", sans-serif;
     font-size: 2rem; font-weight: 500;
-
     background-color: var(--col_main);
-    padding-left: 20px; margin-bottom: 20px;
-    display: flex; align-items: center;
-    height: 3.5rem;
+    height: 3.5rem; width: 100%;
     
-    border: 0px solid #010101; 
+    display: flex; 
+    align-items: center;
+    
+    padding: 0px 10px 0px 15px ;
+    margin-bottom: 10px;
+    border: 0px solid #010101;
     border-radius: 0px;
 
     img{ height: 30px; width: 30px; }
-    
-    .title{
-        padding-left: 10px;
-        color: var(--text);
-        text-align: center; 
-        align-items: center;
+    .parte2{width: 4%;}
+    .textletras{
+        width: 85%;
+        .title{
+            padding-left: 10px;
+            color: var(--text);
+            text-align: center; 
+            align-items: center;
+        }
     }
-    
 }
+
 .mainBody{
     font-family: "Fira Sans", sans-serif;
     display: flex;
     height: 100%;
     
     .extendedRegList{
-        /*background-color: var(--BGwhite);/**/
+        background-color: var(none); /*? usado para testing*/
         height: 100%; width: 70%;
 
         margin: 10px; 
@@ -58,14 +63,12 @@ body{
             height: 50px; width: 100%;
             
             display: flex;
-            /*
-            display: grid;
-            grid-template-columns: repeat(3,1fr) ;/**/
-
+            
             margin: 0px 0px 10px 0px; 
             border: 1px solid #010101; 
             border-radius: var(--roundcor);
             box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3);
+            a{text-decoration: none;}
 
             .card_head{
                 background-color: var(--col_main);/**/
@@ -79,7 +82,7 @@ body{
                 
             }
             .card_body{
-                /*background-color: #A39EC4;/**/
+                background-color: none;/*? usado para testing*/
                 height: 99%; width: 100%;
                 display: flex;
                 text-align: center;
@@ -127,7 +130,7 @@ body{
         border: 1px solid #010101;
         
         .searchbar{
-            /*background-color: var(--FGwhite);/**/
+            background-color: var(none);/*? usado para testing*/
             height: 40px;
             
             display: flex;
@@ -136,7 +139,7 @@ body{
             
             border: 0px solid #010101; 
             margin: 20px;
-            /*p{margin: 0px;}/**/
+            /*p{margin: 0px;}/*TODO: eliminar*/
             .searchField{
                 height: 40px; width: 90%;
                 text-align: center;
