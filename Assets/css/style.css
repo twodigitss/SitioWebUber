@@ -65,11 +65,11 @@ body{
 
 .login{
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 5rem;
     text-align: center;
     border: 1px solid var(--oscuro);
-    width: 25rem;
-    height: 35rem;
+    width: 22rem;
+    height: 37rem;
     background: url(../img/portadapng.png);
     color: var(--blanco);
     border-radius: 2rem;
@@ -78,6 +78,14 @@ body{
     background-position: center;
     overflow: hidden;
 }
+@media (min-width:768px) {
+    .login{
+        margin-top: 1.3rem;
+        width: 25rem;
+        height: 33rem;
+    }
+}
+
 form{
     display: block;
     box-sizing: border-box;
@@ -89,33 +97,54 @@ form{
     display: flex;
     gap: 0.5rem;
 }
+
 h1{
     font-weight: normal;
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-shadow: 0 0 0.2rem rgba(0,0,0,0.5);
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
+@media (min-width:768px) {
+    h1{
+        font-size: 2.4rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
 label{
     color: rgba(255,255,255,0.8);
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.2rem;
     padding-left: 1rem;
 }
+@media (min-width:768px) {
+    label{
+        font-size: 1.5rem;
+    }
+}
+
 input{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background: rgba(255,255,255,0.3);
-    height: 4rem;
+    height: 3.4rem;
     line-height: 4rem;
     border-radius: 1rem;
     padding: 0 2rem;
     border: none;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: var(--blanco);
+}
+@media (min-width:768px) {
+    input{
+        font-size: 1.4rem;
+        height: 4rem;
+        margin-bottom: 2rem;
+    }
 }
 
 a{ 
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-decoration: none;
     margin-top: 1rem 0;
     background-color: #895486;
@@ -129,6 +158,12 @@ a{
     box-shadow: 0 0 0.5rem rgba(0,0,0,0.3);
     border-radius: 4rem;
 }
+@media (min-width:768px) {
+    a{ 
+        font-size: 1.5rem;
+    }
+}
+
 a:hover{
     background-color: #7a2575;
 }
