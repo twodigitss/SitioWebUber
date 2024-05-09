@@ -197,7 +197,6 @@ body{
     .tabla{
         margin-top: 0;
         margin-bottom: 0;
-        border: 2px var(--oscuro) solid;
         td, th{
             font-size: 3rem;
             width: 23rem;
