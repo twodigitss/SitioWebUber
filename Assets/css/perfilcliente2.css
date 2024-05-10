@@ -3,14 +3,25 @@
 :root{
     --blanco: #ffffff;
     --oscuro: #000000;
-    --primario_barra:	aquamarine;	
+    --primario_barra:	#689d6a;	
     --botones:	pink;
-    --grisclaro:	#727272;
+    --grisclaro:	#9a9898;
     --rosaClaro: #895486;
+    --bg: #FBF1C7;
+    --gray: #928374;
+    --red: #9D0006;
+    --green: #79740E;
+    --yellow: #B57614;
+    --blue: #076678;
+    --purple: #8F3F71;
+    --orange: #AF3A03;
+    --fg: #3C3836;
+    --gray2: #7C6F64;
     --text: #010101;  
     --aqua: #689d6a;
     --col_main: var(--aqua);
 }
+
 body{
     font-size: 62.5%;
     margin: 0%;
@@ -54,48 +65,52 @@ body{
     max-width: 120rem;
     margin: 0 auto;
 }
-.encabezado{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: aquamarine;
-    .image{
-        grid-column: 1/2;
-        align-items: start;
-        width: 5rem;
-        height: 5rem;
-    }
-}
+
 .menu-principal{
     margin: 2rem 2rem 0% 2rem; /*arriba, derecha, abajo, izquierda*/
     height: 550px;
 }
 .cuadro{
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-
     .acomodo{
-        width: 30%;
         text-align: center;
     }
 
     .texto{
-        width: 70%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         .centrado{
             text-align: center;
         }
     }
 }
+@media (min-width:768px) {
+    .cuadro{
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    
+        .acomodo{
+            width: 30%;
+        }
+    
+        .texto{
+            width: 70%;
+            font-size: 2rem;
+            .centrado{
+                text-align: center;
+            }
+        }
+    }
+}
+
 .botones{
     display: flex;
     width: 100%;
     a{  
         margin: 1rem auto;
         text-align: center;
-        width: 15rem;
+        width: 12rem;
         height: 1rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
         background-color: var(--rosaClaro);
         color: #fff;
@@ -108,6 +123,15 @@ body{
         background-color: var(--purple);
     }
 }
+@media (min-width:768px) {
+    .botones{
+        a{  
+            width: 15rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
 .grid-three-column{
     display: flex;
     flex-direction: row;
@@ -118,11 +142,11 @@ body{
     display: flex;
     width: 100%;
     gap: 3rem;
+    margin-bottom: 2rem;
     a{
-        
         text-align: center;
-        width: 15rem;
-        font-size: 1.2rem;
+        width: 12rem;
+        font-size: 1rem;
         text-decoration: none;
         background-color: #00ff11;
         color: #fff;
@@ -136,15 +160,26 @@ body{
     }
     justify-content: center;
 }
+@media (min-width:768px) {
+    .botones2{
+        margin-bottom: 0;
+        a{
+            width: 15rem;
+            font-size: 1.2rem;
+        }
+    }
+}
 
 .tabla{
     border: 2px var(--oscuro) solid;
     margin: 0 auto;
+    margin-top: 15rem;
+    margin-bottom: 2rem;
     td, th{
-        font-size: 3rem;
+        font-size: 1.5rem;
         text-align: center;
-        width: 23rem;
-        height: 3rem;
+        width: 18rem;
+        height: 2rem;
         border: 2px;
         border-color: var(--oscuro);
         border-style: solid;
@@ -156,5 +191,16 @@ body{
     
     tr:nth-child(odd) td{
         background-color:#eee;
+    }
+}
+@media (min-width:768px) {
+    .tabla{
+        margin-top: 0;
+        margin-bottom: 0;
+        td, th{
+            font-size: 3rem;
+            width: 23rem;
+            height: 3rem;
+        }
     }
 }
