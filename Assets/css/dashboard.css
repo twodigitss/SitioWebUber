@@ -41,13 +41,13 @@ body{
     
     display: flex; 
     align-items: center;
-    padding: 0px 10px 0px 15px ;
+    padding: 0px 0px 0px 0px ;
     margin-bottom: 10px;
     border: 0px solid #010101;
     border-radius: 0px;
 
     img{ height: 30px; width: 30px; }
-    .parte2{width: 4%;}
+    .parte2{margin-left: 15px; width: 4%;}
     .textletras{
         width: 85%;
         .title{ height: 100%;
@@ -68,16 +68,16 @@ body{
     .profile{
         background-color: var(--BGwhite);
         width: 30%; height: 100%;
-        
-        margin-left: 15px;
+        display: grid; 
+        margin: 0px 00px 0px 00px;
         border-radius: 10px;
         border: 0px solid #010101;
         
         box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.3); /* Add shadow */
 
         .profilepicture{
-            display:flex; justify-content: center;
-            margin: auto; padding: 15px;
+            display:grid; justify-content: center;
+            margin: auto; padding: 20px 0px 0px 0px ;
         
             img{
                 border: 0px solid #010101; border-radius: 5px;
@@ -87,20 +87,23 @@ body{
                 height: 200px; width: 200px;
                 
             }/**/
+            .centeredTitle{font-weight: 500; text-align:center;}
         }
         .profileabout{
             color: var(--text);
             padding: 25px;
             .centeredTitle{font-weight: 500; text-align:center;}
             .normalParagraph{text-align:justify;}
+            .bio{}
+            .studies{}
         }
         
     }
 
     .client_Card{
-        display: flex; flex-wrap:wrap;
+        display: flex; flex-wrap: wrap;
         width: 70%; height: 100%;
-        margin-left: 10px;
+        margin: 0px 0px 0px 0px;
         color: var(--text);
         img{ height: 40px; width: 40px; } /*For in-card pfp*/
         
@@ -154,3 +157,44 @@ body{
     } 
 }
 
+@media(max-width:768px){
+    .dashboard{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        width: 100%; height: 100%;
+        .profile{
+            display: grid; 
+            margin: 0px 0px 0px 15px;
+            justify-content: center;
+            width: 94%;
+            .profilepicture{
+                display: grid; justify-content: center; align-items: center;
+                img{margin-left: 40px; width: 90px; height: 90px;}
+                .centeredTitle{font-weight: 500; text-align:center;}
+            }
+            .profileabout{
+                display: flex;
+                .bio{margin: 10px;}
+                .studies{margin: 10px;}
+            }
+        }
+        .client_Card{
+            width: 100%; height: 100%;
+            display: flex; flex-wrap: wrap;
+            margin: 20px 0px 0px 0px;
+            padding: 0 auto;
+            justify-content: center;
+            .card{
+                margin:  10px 10px 10px 10px;
+                width: 45%; height: 120px;
+                .card_head{}
+                .card_footer{
+                    img{margin: 8px 5px 5px 5px; width: 28px; height: 28px; }
+                }
+                .plusSymbol{}
+            }
+        }
+    }
+    
+}
