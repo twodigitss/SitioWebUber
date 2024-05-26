@@ -1,3 +1,18 @@
+<?php
+    try{
+        $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
+        $enunciado = $conexion->prepare("SELECT * FROM registros");
+        $enunciado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
+        $enunciado->execute();
+            
+        if($row = $enunciado->fetch()){
+            
+        }
+    }catch(PDOException $e){
+        echo "error: ".$e->getMessage();
+    }   
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -54,30 +69,18 @@
                 <th>Peso</th>
                 <th>Altura</th>
             </tr>
-            <tr>
-                <td>Arturo</td>
-                <td>21</td>
-                <td>80</td>
-                <td>1.70</td>
-            </tr>
-            <tr>
-                <td>Ana</td>
-                <td>18</td>
-                <td>60</td>
-                <td>1.50</td>
-            </tr>
-            <tr>
-                <td>Carlos</td>
-                <td>22</td>
-                <td>85</td>
-                <td>1.75</td>
-            </tr>
-            <tr>
-                <td>Lupe</td>
-                <td>21</td>
-                <td>70</td>
-                <td>1.72</td>
-            </tr>
+            <?php
+            $i = 0;
+            while($row = $enunciado->fetch()){
+                echo '<tr>
+                    <td>'.$row['nombre'].'</td>
+                    <td>'.$row['edad'].'</td>
+                    <td>'.$row['peso'].'</td>
+                    <td>'.$row['altura'].'</td>
+                    </tr>';
+                $i++;
+            }
+            ?>
         </table>
     </section>
 </body>
