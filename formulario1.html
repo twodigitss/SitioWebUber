@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Assets/css/formulario.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/menu.css"> <!-- Enlazar el CSS -->
     <script src="Assets/javascript/menu.js"></script> <!-- Enlazar el JavaScript -->
+    <script src="Assets/javascript/DosDigitos.js"></script>
     <title>Info. Paciente</title>
 </head>
 <body>
@@ -35,7 +36,7 @@
                     </div>
                     <div class="campo">
                         <label>Edad: </label>
-                        <input class="input-text" type="integer" >
+                        <input  type="number" id="limited-number" oninput="limitInput(event)" class="cuadroTexto" min="0" >
                     </div>
                     <div class="campo">
                         <label>Fecha de nacimiento</label>

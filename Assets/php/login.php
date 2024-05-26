@@ -16,7 +16,6 @@
                 }else{
                     header('Location: http://localhost/SitioWebUber/index.html');
                 }
-
             }else{
                 header('Location: http://localhost/SitioWebUber/index.html');
             }
