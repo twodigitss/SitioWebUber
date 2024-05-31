@@ -8,7 +8,6 @@
             $enunciado = $conexion->prepare("SELECT * FROM login WHERE Usuario = ? ");
             $enunciado->bindParam(1,$User);
             $enunciado->execute();
-            
 
             if($row = $enunciado->fetch()){
                 if($row['Contraseña'] == $Password and $row['Usuario'] == $User){
