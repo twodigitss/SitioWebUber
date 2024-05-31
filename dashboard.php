@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +21,7 @@
         <div class="textletras">                        <!--Rest in peace panel, se te va a extranar att:LE-->
             <p class="title">Healthsync</p>
         </div>
-    </header>
+    </header> 
 
     <div class="dashboard">
         <div class="profile">
@@ -66,8 +65,6 @@
                 try {
                     //TODO: with perfil cliente, make it able to accept variables and paste them on the fields
                     //just like i did on dashboard
-                    $_SESSION['nombres']=array(); $_SESSION['apellidos']=array();
-
                     $conexion = new PDO('mysql:host=127.0.0.1:3306; dbname=nutribase','root','root',);
                     $resultado = $conexion->query('SELECT NOMBRES, APELLIDOS FROM pacientes');
                     $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
@@ -76,8 +73,8 @@
                         $nombres = $row['NOMBRES']; $apellidos = $row['APELLIDOS'];
                             $_SESSION['nombres'][] = $nombres;
                             $_SESSION['apellidos'][] = $apellidos;
-                        $ruta="Assets/php/perfilPrueba.php";
-                        #?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
+                        $ruta="Assets/php/perfilPrueba.php?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
+                        #;
                         print("
                         <div class='card'>
                                 <div class='card_head'>

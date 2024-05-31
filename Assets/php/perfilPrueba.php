@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php
+    #CHINGAS TU MADRE MALDITO GET
+    $conexion = new PDO('mysql:host=localhost:3306; dbname=nutribase', 'root', 'root');
+    $enunciado = $conexion->prepare("SELECT * FROM pacientes");
+    $enunciado->setFetchMode(PDO::FETCH_ASSOC); $enunciado->execute();
+    $i = 0;
+    $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
+    $apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,7 +40,7 @@
             </div>
             <div class="texto">
                 <section class="centrado">
-                    <h3>Laura Mendoza</h3> <p>Ocupacion: Profesora</p> <p>Edad: 20</p> 
+                    <h3><?php echo htmlspecialchars($nombre . ' ' . $apellido); ?></h3> <p>Ocupacion: Profesora</p> <p>Edad: 20</p> 
                     <p>Telefono: 4531552467</p> <p>Email: al21020013@itsa.edu.mx</p>
                 </section>
             </div>
@@ -51,11 +60,7 @@
             </tr>
             
             <?php
-                try{
-                    $conexion = new PDO('mysql:host=localhost:3306; dbname=nutribase', 'root', 'root');
-                    $enunciado = $conexion->prepare("SELECT * FROM pacientes");
-                    $enunciado->setFetchMode(PDO::FETCH_ASSOC); $enunciado->execute();
-                    $i = 0;
+                try{ 
                     while($row = $enunciado->fetch()){
                         $nombre=$row['NOMBRES']; $apellido=$row['APELLIDOS'];
                         echo "<tr>

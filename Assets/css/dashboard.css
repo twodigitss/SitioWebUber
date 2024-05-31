@@ -18,7 +18,7 @@
     --yukiFG: #F0F0F0;
 
     --col_main: var(--aqua);
-    --col_sec: var(--aqua);
+    --col_sec: var(--kusa);
     --roundcor: 5px;
     
 }
@@ -137,7 +137,7 @@ body{
                 #plusSymbolChar{font-size: 30px;}
             }
             .card_footer{
-                background-color: var(--col_sec); color: var(--text);            
+                background-color: var(--col_main); color: var(--text);            
                 height: 30%; width: 100%;
                 
                 display: flex;
