@@ -27,32 +27,44 @@
             </div>
         </div>
         <div class="extendedRegList">
-            <?php 
-            try {
+                <!--HERE STARTS FETCHING FOR VALUES ON DATABASE-->
+                <?php
+                try {
+                    //TODO: with perfil cliente, make it able to accept variables and paste them on the fields
+                    //just like i did on dashboard
                     $conexion = new PDO('mysql:host=127.0.0.1:3306; dbname=nutribase','root','root',);
                     $resultado = $conexion->query('SELECT NOMBRES, APELLIDOS FROM pacientes');
+                    $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
+
                     foreach($resultado as $row) {
-                       echo '
-                            <div class="card">
-                                <div class="card_head">
-                                <a href="dashboard.html">
-                                    <img width="32" height="32" src="https://img.icons8.com/windows/64/pin3.png" alt="pin3"/></a> 
+                        $nombres = $row['NOMBRES']; $apellidos = $row['APELLIDOS'];
+                        $ruta="perfilPrueba.php"; 
+                        $urlExtension="?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
+                        print("
+                        <div class='card'>
+                                <div class='card_head'>
+                                <a href='dashboard.html'>
+                                    <img width='32' height='32' src='https://img.icons8.com/windows/64/pin3.png'/></a> 
                                 </div>
-                                <div class="card_body"> 
-                                    <a href="perfilcliente.html">
-                                        <p>'.$row['NOMBRES'].' '.$row['APELLIDOS'].'</p></a>
+                                <div class='card_body'> 
+                                    <a href='$ruta$urlExtension'>
+                                        <p> $nombres $apellidos </p></a>
                                 </div>
-                                <div class="card_tail">
-                                <a href="editarDatos.html">
-                                    <img class="pen" width="32" height="32" src="https://img.icons8.com/pastel-glyph/64/pen--v1.png" alt="pen--v1"/></a> 
-                                <a href="#">
-                                    <img width="32" height="32" src="https://img.icons8.com/windows/64/erase.png" alt="erase"/></a> 
+                                <div class='card_tail'>
+                                <a href='editarDatos.html'>
+                                    <img class='pen' width='32' height='32' src='https://img.icons8.com/pastel-glyph/64/pen--v1.png'/></a> 
+                                <a href='#'>
+                                    <img width='32' height='32' src='https://img.icons8.com/windows/64/erase.png'/></a> 
                                 </div>
-                            </div>           
-                       '; 
+                            </div>       
+                            ");
+                        
                     }
-                }
-                catch (PDOException $e) { echo'error: '.$e->getMessage(); }
+                } 
+                catch (PDOException $e) {
+                    echo'error: '.$e->getMessage();
+                }        
+            
             ?>
             
             

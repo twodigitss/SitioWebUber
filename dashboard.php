@@ -71,10 +71,7 @@
 
                     foreach($resultado as $row) {
                         $nombres = $row['NOMBRES']; $apellidos = $row['APELLIDOS'];
-                            $_SESSION['nombres'][] = $nombres;
-                            $_SESSION['apellidos'][] = $apellidos;
-                        $ruta="Assets/php/perfilPrueba.php?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
-                        #;
+                        $ruta="perfilPrueba.php?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
                         print("
                         <div class='card'>
                                 <div class='card_head'>
