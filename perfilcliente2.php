@@ -1,14 +1,15 @@
 <?php
-    #aqui toma mis preciosas variables que mando desde dashboard.php
     $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
-    $apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
-    $parameters="?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
+    #$apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
+    $urlExtension="?nombres=".urlencode($nombre);
 
-    #CHINGAS TU MADRE MALDITO GET
-    $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
-    $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE NOMBRES = ? AND APELLIDOS = ?");
+    $host="127.0.0.1:3306"; $database="nutribase"; 
+    $tabla="pacientes";
+                     
+    $conexion = new PDO("mysql:host=$host; dbname=$database", 'root', 'root');
+    $enunciado = $conexion->prepare("SELECT * FROM $tabla WHERE NOMBRES = ?");
     $enunciado->bindParam(1,$nombre);
-    $enunciado->bindParam(2,$apellido);
+    #$enunciado->bindParam(2,$apellido);
     $enunciado->execute();
     $i = 0;
 ?>
@@ -37,15 +38,15 @@
             <div class="acomodo">
                 <img src="Assets/img/empty-user.png" alt="persona">
                 <div class="modificar botones">
-                    <a href="editarDatos.html">Modificar Datos</a>
+                    <a href="editarDatos.html<?php print($urlExtension)?>">Modificar Datos</a>
                 </div>
                 <div class="eliminar botones">
-                    <a href="dashboard.html">Eliminar Perfil</a>
+                    <a href="eliminarpaciente.php<?php print($urlExtension)?>">Eliminar Perfil</a>
                 </div>
             </div>
             <div class="texto">
                 <section class="centrado">
-                    <h3>Laura Mendoza</h3>
+                    <h3><?php print("$nombre");?></h3>
                     <p>Ocupacion: Profesora</p>
                     <p>Edad: 20</p>
                     <p>Telefono: 4531552467</p>
@@ -56,7 +57,7 @@
         <div class="grid-three-column contenedor">
             <div class="botones2">
                 <a href="formulario2.html">Consulta</a>
-                <a href="perfilcliente.html">Mostrar Bitacora</a>
+                <a href="perfilcliente.php<?php print($urlExtension)?>">Mostrar Bitacora</a>
             </div>
         </div>
     </main>
@@ -64,10 +65,9 @@
     <section class="contenedor">
         <table class="tabla">
             <tr>
+                <th>ID</th>
+                <th>Nutricionista</th>
                 <th>Nombre</th>
-                <th>Edad</th>
-                <th>Peso</th>
-                <th>Altura</th>
             </tr>
             <?php
             while($row = $enunciado->fetch()){
@@ -75,7 +75,6 @@
                     <td>'.$row['ID'].'</td>
                     <td>'.$row['NUTRICIONISTA'].'</td>
                     <td>'.$row['NOMBRES'].'</td>
-                    <td>'.$row['APELLIDOS'].'</td>
                     </tr>';
             }
             ?>

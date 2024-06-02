@@ -1,14 +1,18 @@
 <?php
     $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
-    $apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
-    $urlExtension="?nombres=".urlencode($nombre)."&apellidos=".urlencode($apellido);
+    #$apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
+    $urlExtension="?nombres=".urlencode($nombre);
 
     #luis, debemos hacer un abase de datos que todos podamos usar... porque eso de modificar cada vez que alguien edita es poco profesional...
     #atentamente: el otro luis
-    $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
-    $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE ");
-    $enunciado->setFetchMode(PDO::FETCH_ASSOC); 
-    $enunciado->execute();
+    $host="127.0.0.1:3306"; $database="nutribase"; 
+    $tabla="pacientes";
+                     
+    $conexion = new PDO("mysql:host=$host; dbname=$database", 'root', 'root');
+    $resultado = $conexion->query("SELECT * FROM $tabla");
+    $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
+
+    #$enunciado->execute(); aparentemente eso hace que no cargue la pagina
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,12 +42,12 @@
                     <a href="editarDatos.html">Modificar Datos</a>
                 </div>
                 <div class="eliminar botones">
-                    <a href="dashboard.html">Eliminar Perfil</a>
+                    <a href="eliminarpaciente.php<?php print($urlExtension)?>">Eliminar Perfil</a>
                 </div>
             </div>
             <div class="texto">
                 <section class="centrado">
-                    <h3><?php echo htmlspecialchars("$nombre $apellido"); ?></h3>
+                    <h3><?php echo htmlspecialchars("$nombre"); ?></h3>
                     <p>Ocupacion: Profesora</p>
                     <p>Edad: 20</p>
                     <p>Telefono: 4531552467</p>
