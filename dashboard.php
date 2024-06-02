@@ -70,14 +70,14 @@
                     $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
 
                     foreach($resultado as $row) {
-                        $nombres = $row['NOMBRES']; $apellidos = $row['APELLIDOS'];
-                        $ruta="perfilcliente.php?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
+                        $nombres = $row['nombre']; 
+                        $ruta="perfilcliente.php?nombres=".urlencode($nombres);
                         print("
                         <div class='card'>
                                 <div class='card_head'>
                                     <img class='image' src='Assets/img/empty-user.png'>
                                     <div class='existing_reg'>
-                                        <a href='$ruta'> $nombres $apellidos </a>
+                                        <a href='$ruta'> $nombres </a>
                                     </div>
                                 </div>
                             <div class='card_footer'>

@@ -35,7 +35,9 @@ if(isset($_POST['registro'])) { //el nombre del boton (submit) es registro
     $enunciado->bindParam(14,$otros);
     
     $enunciado->execute();
-
+    header('Location: http://localhost/SitioWebUber/perfilcliente.php');
+}
+if(isset($_POST['registro'])) { //el nombre del boton (submit) es registro 
 }
 
 ?>
