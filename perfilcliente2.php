@@ -1,15 +1,15 @@
 <?php
-    try{
-        $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
-        $apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
-        $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
-        $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE NOMBRES = ? AND APELLIDOS = ?");
-        $enunciado->bindParam(1,$nombre);
-        $enunciado->bindParam(2,$apellido);
-        $enunciado->execute();
-    }catch(PDOException $e){
-        echo "error: ".$e->getMessage();
-    }   
+    #aqui toma mis preciosas variables que mando desde dashboard.php
+    $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
+    $apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
+    $parameters="?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
+
+    #CHINGAS TU MADRE MALDITO GET
+    $conexion = new PDO('mysql:host=localhost:3306; dbname=nutribase', 'root', 'root');
+    $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE ");
+    $enunciado->setFetchMode(PDO::FETCH_ASSOC); $enunciado->execute();
+    $i = 0;
+
 ?>
 
 <!DOCTYPE html>

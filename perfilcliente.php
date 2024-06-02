@@ -1,3 +1,16 @@
+<?php
+    $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
+    $apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
+    $urlExtension="?nombres=".urlencode($nombre)."&apellidos=".urlencode($apellido);
+
+    #luis, debemos hacer un abase de datos que todos podamos usar... porque eso de modificar cada vez que alguien edita es poco profesional...
+    #atentamente: el otro luis
+    $conexion = new PDO('mysql:host=localhost:3306; dbname=nutribase', 'root', 'root');
+    $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE ");
+    $enunciado->setFetchMode(PDO::FETCH_ASSOC); $enunciado->execute();
+    $i = 0;
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,7 +44,7 @@
             </div>
             <div class="texto">
                 <section class="centrado">
-                    <h3>Laura Mendoza</h3>
+                    <h3><?php echo htmlspecialchars("$nombre $apellido"); ?></h3>
                     <p>Ocupacion: Profesora</p>
                     <p>Edad: 20</p>
                     <p>Telefono: 4531552467</p>
@@ -41,8 +54,8 @@
         </div>
         <div class="grid-three-column contenedor">
             <div class="botones2">
-                <a href="formulario2.html">Consulta</a>
-                <a href="perfilcliente2.php">Mostrar Bitacora</a>
+                <a href="formulario2.php<?php print($urlExtension);?>">Consulta</a>
+                <a href="perfilPrueba.php<?php print($urlExtension);?>">Mostrar Bitacora</a>
             </div>
         </div>
     </main>
