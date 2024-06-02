@@ -72,10 +72,10 @@
             $i = 0;
             while($row = $enunciado->fetch()){
                 echo '<tr>
-                    <td>'.$row['nombre'].'</td>
-                    <td>'.$row['edad'].'</td>
-                    <td>'.$row['peso'].'</td>
-                    <td>'.$row['altura'].'</td>
+                    <td>'.$row['ID'].'</td>
+                    <td>'.$row['NUTRICIONISTA'].'</td>
+                    <td>'.$row['NOMBRES'].'</td>
+                    <td>'.$row['APELLIDOS'].'</td>
                     </tr>';
                 $i++;
             }

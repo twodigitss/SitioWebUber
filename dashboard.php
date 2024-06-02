@@ -65,7 +65,7 @@
                 try {
                     //TODO: with perfil cliente, make it able to accept variables and paste them on the fields
                     //just like i did on dashboard
-                    $conexion = new PDO('mysql:host=127.0.0.1:3306; dbname=nutribase','root','root',);
+                    $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
                     $resultado = $conexion->query('SELECT NOMBRES, APELLIDOS FROM pacientes');
                     $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
 
