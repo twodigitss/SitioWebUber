@@ -1,13 +1,12 @@
 <?php
     try{
+        $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
+        $apellido = isset($_GET['apellidos']) ? $_GET['apellidos'] : '';
         $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
-        $enunciado = $conexion->prepare("SELECT * FROM registros");
-        $enunciado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
+        $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE NOMBRES = ? AND APELLIDOS = ?");
+        $enunciado->bindParam(1,$nombre);
+        $enunciado->bindParam(2,$apellido);
         $enunciado->execute();
-            
-        if($row = $enunciado->fetch()){
-            
-        }
     }catch(PDOException $e){
         echo "error: ".$e->getMessage();
     }   
@@ -73,10 +72,10 @@
             $i = 0;
             while($row = $enunciado->fetch()){
                 echo '<tr>
-                    <td>'.$row['nombre'].'</td>
-                    <td>'.$row['edad'].'</td>
-                    <td>'.$row['peso'].'</td>
-                    <td>'.$row['altura'].'</td>
+                    <td>'.$row['ID'].'</td>
+                    <td>'.$row['NUTRICIONISTA'].'</td>
+                    <td>'.$row['NOMBRES'].'</td>
+                    <td>'.$row['APELLIDOS'].'</td>
                     </tr>';
                 $i++;
             }
