@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="Assets/css/formulario.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/menu.css"> <!-- Enlazar el CSS -->
     <script src="Assets/javascript/menu.js"></script> <!-- Enlazar el JavaScript -->
-    <script src="Assets/javascript/DosDigitos.js"></script>
     <title>Info. Paciente</title>
 </head>
 <body>
@@ -21,10 +20,14 @@
         <section>
             <h2>AGREGAR PACIENTE</h2>
             <div class="contenedor-campos">
-                <form class="formulario">       
+                <form action="formulario1.php" name="formu1" method="post" class="formulario">       
                     <div class="campo">
                         <label>Nombre: </label>
-                        <input class="input-text" type="text" >
+                        <input class="input-text" type="text" name="nombre" >
+                    </div>
+                    <div class="campo">
+                        <label>Edad: </label>
+                        <input class="input-text" type="text" name="edad" >
                     </div>
                     <div class="campo">              
                         <!--Dar el mismo name a ambos radios nos ayuda a que solo se seleccione una opcion ;)-->
@@ -35,38 +38,28 @@
                         <label for="mujer">Mujer</label>
                     </div>
                     <div class="campo">
-                        <label>Edad: </label>
-                        <input  type="number" id="limited-number" oninput="limitInput(event)" class="cuadroTexto" min="0" >
-                    </div>
-                    <div class="campo">
-                        <label>Fecha de nacimiento</label>
-                        <input type="date">
-                    </div>  
-                    <div class="campo">
                         <label>Ocupación: </label>
-                        <input class="input-text" type="text" >
+                        <input class="input-text" type="text" name="ocupacion">
                     </div>
                     <div class="campo">
                         <label>Estado civil: </label>
-                        <input class="input-text" type="text" >
+                        <input class="input-text" type="text" name="estado" >
                     </div>        
                     <div class="campo">
                         <label>Telefono: </label>
-                        <input class="input-text" type="integer" >
+                        <input class="input-text" type="integer" name="telefono" >
+                    </div>
+                    <div class="campo">
+                        <label>Correo Electronico: </label>
+                        <input class="input-text" type="text" name="correo" >
                     </div>
                     <div class="campo">
                         <label>Dirección: </label>
-                        <input class="input-text" type="text" >
+                        <input class="input-text" type="text" name="direccion">
                     </div>
+                    <input type="submit" name="registro" value="enviar">
+                    <input type="submit" name="cancel" value="cancelar">
                 </form>   
-                <div class="botones">
-                    <div class="boton">
-                        <a href="dashboard.html">Finalizado</a>
-                    </div>    
-                    <div class="boton">
-                        <a href="dashboard.html">Cancelar</a>
-                    </div>       
-                </div>
                
             </div>
            

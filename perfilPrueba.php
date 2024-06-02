@@ -5,11 +5,10 @@
     $urlExtension="?nombres=".urlencode($nombre)."&apellidos=".urlencode($apellido);
 
     #CHINGAS TU MADRE MALDITO GET
-    $conexion = new PDO('mysql:host=localhost:3306; dbname=nutribase', 'root', 'root');
+    $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
     $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE ");
     $enunciado->setFetchMode(PDO::FETCH_ASSOC); $enunciado->execute();
     $i = 0;
-
 ?>
 <!DOCTYPE html>
 <html lang="es">

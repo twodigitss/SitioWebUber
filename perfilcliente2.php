@@ -5,11 +5,12 @@
     $parameters="?nombres=".urlencode($nombres)."&apellidos=".urlencode($apellidos);
 
     #CHINGAS TU MADRE MALDITO GET
-    $conexion = new PDO('mysql:host=localhost:3306; dbname=nutribase', 'root', 'root');
-    $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE ");
-    $enunciado->setFetchMode(PDO::FETCH_ASSOC); $enunciado->execute();
+    $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
+    $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE NOMBRES = ? AND APELLIDOS = ?");
+    $enunciado->bindParam(1,$nombre);
+    $enunciado->bindParam(2,$apellido);
+    $enunciado->execute();
     $i = 0;
-
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/perfilcliente2.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu.css"> <!-- Enlazar el CSS -->
-    <script src="assets/javascript/menu.js"></script> <!-- Enlazar el JavaScript -->
+    <link rel="stylesheet" type="text/css" href="Assets/css/menu.css"> <!-- Enlazar el CSS -->
+    <script src="menu.js"></script> <!-- Enlazar el JavaScript -->
 </head>
 <body>
     <header class="panel"> 
@@ -34,7 +35,7 @@
     <main class="menu-principal contenedor">
         <div class="cuadro">
             <div class="acomodo">
-                <img src="assets/img/empty-user.png" alt="persona">
+                <img src="Assets/img/empty-user.png" alt="persona">
                 <div class="modificar botones">
                     <a href="editarDatos.html">Modificar Datos</a>
                 </div>
@@ -69,7 +70,6 @@
                 <th>Altura</th>
             </tr>
             <?php
-            $i = 0;
             while($row = $enunciado->fetch()){
                 echo '<tr>
                     <td>'.$row['ID'].'</td>
@@ -77,7 +77,6 @@
                     <td>'.$row['NOMBRES'].'</td>
                     <td>'.$row['APELLIDOS'].'</td>
                     </tr>';
-                $i++;
             }
             ?>
         </table>

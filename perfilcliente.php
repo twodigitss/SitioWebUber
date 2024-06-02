@@ -5,11 +5,10 @@
 
     #luis, debemos hacer un abase de datos que todos podamos usar... porque eso de modificar cada vez que alguien edita es poco profesional...
     #atentamente: el otro luis
-    $conexion = new PDO('mysql:host=localhost:3306; dbname=nutribase', 'root', 'root');
+    $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
     $enunciado = $conexion->prepare("SELECT * FROM pacientes WHERE ");
-    $enunciado->setFetchMode(PDO::FETCH_ASSOC); $enunciado->execute();
-    $i = 0;
-
+    $enunciado->setFetchMode(PDO::FETCH_ASSOC); 
+    $enunciado->execute();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -22,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Assets/css/perfilcliente.css">
     <link rel="stylesheet" type="text/css" href="Assets/css/menu.css"> <!-- Enlazar el CSS -->
-    
+    <script src="menu.js"></script> <!-- Enlazar el JavaScript -->
 </head>
 <body>
     
@@ -55,7 +54,7 @@
         <div class="grid-three-column contenedor">
             <div class="botones2">
                 <a href="formulario2.php<?php print($urlExtension);?>">Consulta</a>
-                <a href="perfilPrueba.php<?php print($urlExtension);?>">Mostrar Bitacora</a>
+                <a href="perfilcliente2.php<?php print($urlExtension);?>">Mostrar Bitacora</a>
             </div>
         </div>
     </main>

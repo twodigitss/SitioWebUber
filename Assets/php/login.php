@@ -11,7 +11,7 @@
 
             if($row = $enunciado->fetch()){
                 if($row['Contraseña'] == $Password and $row['Usuario'] == $User){
-                    header('Location: http://localhost/SitioWebUber/dashboard.html');
+                    header('Location: http://localhost/SitioWebUber/dashboard.php');
                 }else{
                     header('Location: http://localhost/SitioWebUber/index.html');
                 }
