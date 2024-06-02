@@ -65,13 +65,17 @@
                 try {
                     //TODO: with perfil cliente, make it able to accept variables and paste them on the fields
                     //just like i did on dashboard
-                    $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
-                    $resultado = $conexion->query('SELECT * FROM datos');
+                    $host="127.0.0.1:3306"; $database="nutribase"; 
+                    $tabla="pacientes";
+
+                    $conexion = new PDO("mysql:host=$host; dbname=$database", 'root', 'root');
+                    $resultado = $conexion->query("SELECT * FROM $tabla");
                     $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
 
                     foreach($resultado as $row) {
-                        $nombres = $row['nombre']; 
-                        $ruta="perfilcliente.php?nombres=".urlencode($nombres);
+                        $nombres = $row['NOMBRES'];
+                        $urlExtension = "?nombres=".urlencode($nombres);
+                        $ruta="perfilcliente.php$urlExtension";
                         print("
                         <div class='card'>
                                 <div class='card_head'>
