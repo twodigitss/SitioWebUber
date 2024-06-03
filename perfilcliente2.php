@@ -79,7 +79,7 @@
             <div class="acomodo">
                 <img src="Assets/img/empty-user.png" alt="persona">
                 <div class="modificar botones">
-                    <a href="editarDatos.php<?php print($urlExtension);?>">Modificar Datos</a>
+                    <a href="DatosEliminar.php<?php print($urlExtension);?>">Modificar Datos</a>
                 </div>
                 <div class="eliminar botones">
                     <a href="eliminarpaciente.php<?php print($urlExtension)?>">Eliminar Perfil</a>

@@ -53,7 +53,7 @@
                                         <p> $nombres </p></a>
                                 </div>
                                 <div class='card_tail'>
-                                <a href='editarDatos.html'>
+                                <a href='DatosEliminar.php$urlExtension'>
                                     <img class='pen' width='32' height='32' src='https://img.icons8.com/pastel-glyph/64/pen--v1.png'/></a> 
                                 <a href='#'>
                                     <img width='32' height='32' src='https://img.icons8.com/windows/64/erase.png'/></a> 

@@ -92,15 +92,9 @@ if (isset($_POST['submit2'])) {
             </div>
     
             <div class='casillaTexto'>
-                <label for='estado' class='label'>Estado Civil:</label>
+                <label class='label'>Estado Civil:</label>
                 <br>
-                <select id='estado' name='estado'>
-                    <option value='' selected disabled hidden>" . htmlspecialchars($row['estado_civil'], ENT_QUOTES, 'UTF-8') . "</option>
-                    <option value='soltero(a)'>Soltero(a)</option>
-                    <option value='casado(a)'>Casado(a)</option>
-                    <option value='divorciado(a)'>Divorciado(a)</option>
-                    <option value='viudo(a)'>Viudo(a)</option>
-                </select>
+                <input type='text' id='ocupacion' class='cuadroTexto' placeholder='' name='estado' value='" . htmlspecialchars($row['estado_civil'], ENT_QUOTES, 'UTF-8') . "'>
             </div>
     
             <div class='casillaTexto'>
@@ -122,9 +116,7 @@ if (isset($_POST['submit2'])) {
             </div>
     
             <br>
-            <br>
-            <br>
-    
+            
             <div class='contenedorBotones'>
                 <div class='grid3'>
                     <input type='submit' name='submit' value='Finalizar'>
