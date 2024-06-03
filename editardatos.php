@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
         $enunciado->execute();
 
         header('Location: http://localhost/SitioWebUber/perfilcliente.php' . $urlExtension);
-        exit(); // Asegurarse de que no se ejecute más código después de la redirección
+        
     } catch (PDOException $e) {
         echo "error: " . $e->getMessage();
     }
@@ -40,7 +40,6 @@ if (isset($_POST['submit'])) {
 
 if (isset($_POST['submit2'])) {
     header('Location: http://localhost/SitioWebUber/perfilcliente.php' . $urlExtension);
-    exit(); // Asegurarse de que no se ejecute más código después de la redirección
 }
 ?>
 
