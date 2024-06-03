@@ -10,7 +10,6 @@
             $correo =  $_POST['correo'];
             $dir = $_POST ['direccion']; 
 
-
             $conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
             $enunciado = $conexion->prepare("INSERT INTO datos(nombre, edad,sexo, ocupacion, estado_civil, telefono, correo, direccion) values (?,?,?,?,?,?,?,?)");
             
@@ -27,6 +26,7 @@
         }catch(PDOException $e){
             echo "error: ".$e->getMessage();
         }
+        header('Location: http://localhost/SitioWebUber/dashboard.php');
     }
     if(isset($_POST['cancel'])) {
         header('Location: http://localhost/SitioWebUber/dashboard.php');

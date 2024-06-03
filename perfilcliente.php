@@ -5,14 +5,14 @@
 
     #luis, debemos hacer un abase de datos que todos podamos usar... porque eso de modificar cada vez que alguien edita es poco profesional...
     #atentamente: el otro luis
-    $host="127.0.0.1:3306"; $database="nutribase"; 
-    $tabla="pacientes";
+    $host="localhost:3307"; $database="nutriologia"; 
+    $tabla="datos";
                      
     $conexion = new PDO("mysql:host=$host; dbname=$database", 'root', 'root');
-    $resultado = $conexion->query("SELECT * FROM $tabla");
-    $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
+    $resultado = $conexion->prepare("SELECT * FROM $tabla WHERE nombre = ?");
+    $resultado->bindParam(1,$nombre);
 
-    #$enunciado->execute(); aparentemente eso hace que no cargue la pagina
+    $resultado->execute(); #aparentemente eso hace que no cargue la pagina
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,7 +39,7 @@
             <div class="acomodo">
                 <img src="Assets/img/empty-user.png" alt="persona">
                 <div class="modificar botones">
-                    <a href="editarDatos.html">Modificar Datos</a>
+                    <a href="editardatos.php<?php print($urlExtension);?>">Modificar Datos</a>
                 </div>
                 <div class="eliminar botones">
                     <a href="eliminarpaciente.php<?php print($urlExtension)?>">Eliminar Perfil</a>
@@ -47,11 +47,18 @@
             </div>
             <div class="texto">
                 <section class="centrado">
-                    <h3><?php echo htmlspecialchars("$nombre"); ?></h3>
-                    <p>Ocupacion: Profesora</p>
-                    <p>Edad: 20</p>
-                    <p>Telefono: 4531552467</p>
-                    <p>Email: al21020013@itsa.edu.mx</p>
+                    <?php
+                    foreach ($resultado as $row) {
+                        echo "<h3>Nombre: ".$row['nombre']."</h3>";
+                        echo "<p>Edad: ".$row['edad']."</p>";
+                        echo "<p>Sexo: ".$row['sexo']."</p>";
+                        echo "<p>Ocupacion: ".$row['ocupacion']."</p>";
+                        echo "<p>Esatdo civil: ".$row['estado_civil']."</p>";
+                        echo "<p>Telefono: ".$row['telefono']."</p>";
+                        echo "<p>Email: ".$row['correo']."</p>";
+                        echo "<p>Dirección: ".$row['direccion']."</p>";
+                    }
+                    ?>
                 </section>
             </div>
         </div>

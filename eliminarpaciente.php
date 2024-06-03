@@ -9,16 +9,16 @@ try {
     $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
 
     // Database connection parameters
-    $host = "127.0.0.1:3306";
-    $database = "nutribase";
-    $tabla = "pacientes";
+    $host = "localhost:3307";
+    $database = "nutriologia";
+    $tabla = "datos";
 
     // Create a new PDO instance
     $conexion = new PDO("mysql:host=$host;dbname=$database", 'root', 'root');
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Prepare the SQL statement with a placeholder for the 'nombres' value
-    $sql = "DELETE FROM $tabla WHERE NOMBRES = :nombre";
+    $sql = "DELETE FROM $tabla WHERE nombre = :nombre";
     $stmt = $conexion->prepare($sql);
 
     // Bind the 'nombres' value to the placeholder
