@@ -111,14 +111,7 @@
     </main>
 
     <section class="contenedor">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
         <table class="tabla contenedor">
             <tr>
                 <th>antecedentes</th>
