@@ -31,7 +31,54 @@
     <link rel="stylesheet" type="text/css" href="Assets/css/menu.css"> <!-- Enlazar el CSS -->
     <script src="menu.js"></script> <!-- Enlazar el JavaScript -->
 
-    </style>
+   <style>
+    .tabla{
+    border: 2px var(--oscuro) solid;
+    margin-top: 27rem;
+    margin-bottom: 2rem;
+    td, th{
+        font-size: 0.33rem;
+        text-align: center;
+        width: 10rem;
+        height: 2rem;
+        border: 2px;
+        border-color: var(--oscuro);
+        border-style: solid;
+    }
+    th{
+        color:#fff;
+        background-color: #252525;
+    }
+    
+    tr:nth-child(odd) td{
+        background-color:#eee;
+    }
+}
+@media (min-width:768px) {
+    .tabla{
+        margin: 0 auto;
+        margin-top: 0.4rem;
+        margin-bottom: 0;
+        td, th{
+            font-size: 0.9rem;
+            width: 14rem;
+            height: 3rem;
+        }
+    }
+}
+@media (min-width:1200px) {
+    .tabla{
+        margin: 0 auto;
+        margin-top: 0.4rem;
+        margin-bottom: 0;
+        td, th{
+            font-size: 0.9rem;
+            width: 14rem;
+            height: 3rem;
+        }
+    }
+}
+   </style>
 </head>
 <body>
     <header class="panel"> 
