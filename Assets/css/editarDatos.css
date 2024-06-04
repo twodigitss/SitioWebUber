@@ -25,13 +25,12 @@ body {
     border: 0px solid #010101;
     border-radius: 0px;
 
-    img{ height: 30px; width: 30px; }
     .parte2{
-        width: 4%;
+        width: 15%;
         background-color: none;
     }
     .textletras{
-        width: 90%;
+        width: 85%;
         align-items: center;
         justify-content: center;
         .title{
@@ -39,6 +38,26 @@ body {
             color: var(--text);
             text-align: center; 
             align-items: center;
+        }
+    }
+}
+@media (min-width:768px) {
+    .panel{
+        .parte2{
+            width: 10%;
+        }
+        .textletras{
+            width: 90%;
+        }
+    }
+}
+@media (min-width:1200px) {
+    .panel{
+        .parte2{
+            width: 4%;
+        }
+        .textletras{
+            width: 90%;
         }
     }
 }
