@@ -181,8 +181,8 @@ body{
     display: flex;
     width: 100%;
     gap: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     a{
         text-align: center;
         width: 12rem;
@@ -247,7 +247,7 @@ body{
 @media (min-width:1200px) {
     .tabla{
         margin: 0 auto;
-        margin-top: 0;
+        margin-top: 0.4rem;
         margin-bottom: 0;
         td, th{
             font-size: 0.9rem;

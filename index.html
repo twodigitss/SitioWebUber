@@ -57,6 +57,13 @@
                 margin-bottom: 2rem;
             }
         }
+        @media (min-width:1200px) {
+            input{
+                font-size: 1.4rem;
+                height: 4rem;
+                margin-bottom: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -70,9 +77,12 @@
             <form action="Assets/php/login.php" method="post">
                 <h1>LOGIN</h1>
                 <label >Usuario:</label>
+                <br>
                 <input type="text" name="User">
                 <label>Contraseña:</label>
+                <br>
                 <input type="password" name="Password">
+                <br>
                 <input type="submit" name="submit" value="Entrar">
             </form>
         </div>
