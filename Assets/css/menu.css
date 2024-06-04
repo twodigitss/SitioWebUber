@@ -1,9 +1,7 @@
-/* Estilos generales para el menú hamburguesa */
 .menu-toggle {
   display: inline-block;
   cursor: pointer;
 }
-
 .menu-toggle span {
   display: block;
   height: 4px;
@@ -12,7 +10,6 @@
   margin: 5px 5px 0px 10px; /*xoxo LE <3*/
   transition: transform 0.3s, opacity 0.3s; /* Animación para el icono */
 }
-/* Estilos para el menú desplegable */
 .sidenav {
   display: none; /* El menú está oculto por defecto */
   position: absolute;
@@ -21,10 +18,9 @@
   background-color: #333;
   padding: 10px;
   z-index: 1;
-  height: 39.7rem;
+  height: 52rem;
   width: 15rem;
 }
-
 .sidenav a {
   justify-content: space-evenly;
   font-size: 3rem;
@@ -34,20 +30,16 @@
   color: white;
   padding: 8px;
 }
-
 .sidenav a:hover {
   background-color: #862929;
 }
 
-/*Animaciones para el menú hamburguesa cuando está abierto */
 .menu-toggle.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
 .menu-toggle.open span:nth-child(2) {
   opacity: 0;
 }
-
 .menu-toggle.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }

@@ -44,11 +44,11 @@ body{
     border-radius: 0px;
 
     .parte2{
-        width: 4%;
+        width: 15%;
         background-color: none;
     }
     .textletras{
-        width: 90%;
+        width: 85%;
         align-items: center;
         justify-content: center;
         .title{
@@ -56,6 +56,26 @@ body{
             color: var(--text);
             text-align: center; 
             align-items: center;
+        }
+    }
+}
+@media (min-width:768px) {
+    .panel{
+        .parte2{
+            width: 10%;
+        }
+        .textletras{
+            width: 90%;
+        }
+    }
+}
+@media (min-width:1200px) {
+    .panel{
+        .parte2{
+            width: 4%;
+        }
+        .textletras{
+            width: 90%;
         }
     }
 }
@@ -76,12 +96,29 @@ body{
 
     .texto{
         font-size: 1.5rem;
-        .centrado{
-            text-align: center;
-        }
     }
 }
 @media (min-width:768px) {
+    .cuadro{
+        display: flex;
+        gap: 4.5rem;
+    
+        .acomodo{
+            width: 40%;
+        }
+    
+        .texto{
+            h3,p{
+                padding: 0.5rem;
+                margin: 0%;
+                border: 0%;
+            }
+            width: 60%;
+            font-size: 1.7rem;
+        }
+    }
+}
+@media (min-width:1200px) {
     .cuadro{
         display: flex;
         flex-direction: row;
@@ -92,11 +129,14 @@ body{
         }
     
         .texto{
+            h3,p{
+                padding: 0.5rem;
+                margin: 0%;
+                border: 0%;
+            }
             width: 70%;
             font-size: 2rem;
-            .centrado{
-                text-align: center;
-            }
+            margin-bottom: 2rem;
         }
     }
 }
@@ -141,6 +181,7 @@ body{
     display: flex;
     width: 100%;
     gap: 3rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     a{
         text-align: center;
