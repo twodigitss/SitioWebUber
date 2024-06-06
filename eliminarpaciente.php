@@ -9,9 +9,7 @@ try {
     $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
 
     // Database connection parameters
-    $host = "localhost:3307";
-    $database = "nutriologia";
-    $tabla = "datos";
+    $host = "localhost:3307"; $database = "nutriologia"; $tabla = "datos";
 
     // Create a new PDO instance
     $conexion = new PDO("mysql:host=$host;dbname=$database", 'root', 'root');

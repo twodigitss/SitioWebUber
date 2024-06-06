@@ -3,9 +3,8 @@
     --BGwhite: #f1f1f1;
     --FGwhite: #fafafa;
     --text: #010101;  
-    /*GRUVBOX COLORSCHEME*/
+    /*MOUNTAIN COLORSCHEME*/
     --aqua: #689d6a;
-
     --ajisai: #A39EC4;
     --sakura: #C49EC4;
     --suna: #C4C19E;
@@ -31,7 +30,8 @@
 body{
     font-size: 62.5%;
     margin: 0%;
-} /*agregue este body para que la pagina este desde el punto 0 para asi quede bien la barra de titulo xD att:your luis <3*/
+} 
+/*agregue este body para que la pagina este desde el punto 0 para asi quede bien la barra de titulo xD att:your luis <3*/
 
 .panel{
     font-family: "Fira Sans", sans-serif;
