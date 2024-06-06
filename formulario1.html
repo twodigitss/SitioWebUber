@@ -26,16 +26,16 @@
                         <input class="input-text" type="text" name="nombre" >
                     </div>
                     <div class="campo">
-                        <label>Edad: </label>
+                        <label>Edad:</label>
                         <input class="input-text" type="text" name="edad" >
                     </div>
-                    <div class="campo">              
+                    <legend>Sexo: <br></legend>
+                    <div class="campo centrarEsto">              
                         <!--Dar el mismo name a ambos radios nos ayuda a que solo se seleccione una opcion ;)-->
-                        <legend>Sexo: </legend>
-                        <input type="radio" id="hombre" name="sexo" value="hombre"/>
-                        <label for="hombre">Hombre</label>
-                        <input type="radio" id="mujer" name="sexo" value="mujer"/>
-                        <label for="mujer">Mujer</label>
+                        <input class="checks" type="radio" id="hombre" name="sexo" value="hombre"/>
+                        <label class="checks" for="hombre">Hombre</label>
+                        <input class="checks" type="radio" id="mujer" name="sexo" value="mujer"/>
+                        <label class="checks" for="mujer">Mujer</label>
                     </div>
                     <div class="campo">
                         <label>Ocupación: </label>
@@ -50,15 +50,17 @@
                         <input class="input-text" type="integer" name="telefono" >
                     </div>
                     <div class="campo">
-                        <label>Correo Electronico: </label>
+                        <label>Correo: </label>
                         <input class="input-text" type="text" name="correo" >
                     </div>
                     <div class="campo">
                         <label>Dirección: </label>
                         <input class="input-text" type="text" name="direccion">
                     </div>
-                    <input type="submit" name="registro" value="enviar">
-                    <input type="submit" name="cancel" value="cancelar">
+                    <div class="botn">
+                        <input class='botn1' type="submit" name="registro" value="enviar">
+                        <input class='botn1' type="submit" name="cancel" value="cancelar">
+                    </div>
                 </form>   
             </div>
         </section>
