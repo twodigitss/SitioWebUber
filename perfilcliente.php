@@ -39,27 +39,25 @@
             <div class="acomodo">
                 <img src="Assets/img/empty-user.png" alt="persona">
                 <div class="modificar botones">
-                    <a href="DatosEliminar.php<?php print($urlExtension);?>">Modificar Datos</a>
+                    <a href="DatosEditar.php<?php print($urlExtension);?>">Modificar Datos</a>
                 </div>
                 <div class="eliminar botones">
                     <a href="eliminarpaciente.php<?php print($urlExtension)?>">Eliminar Perfil</a>
                 </div>
             </div>
             <div class="texto">
-                <section class="centrado">
-                    <?php
-                    foreach ($resultado as $row) {
-                        echo "<h3>Nombre: ".$row['nombre']."</h3>";
-                        echo "<p>Edad: ".$row['edad']."</p>";
-                        echo "<p>Sexo: ".$row['sexo']."</p>";
-                        echo "<p>Ocupacion: ".$row['ocupacion']."</p>";
-                        echo "<p>Esatdo civil: ".$row['estado_civil']."</p>";
-                        echo "<p>Telefono: ".$row['telefono']."</p>";
-                        echo "<p>Email: ".$row['correo']."</p>";
-                        echo "<p>Dirección: ".$row['direccion']."</p>";
-                    }
-                    ?>
-                </section>
+                <?php
+                foreach ($resultado as $row) {
+                    echo "<h3>Nombre: ".$row['nombre']."</h3>";
+                    echo "<p>Edad: ".$row['edad']."</p>";
+                    echo "<p>Sexo: ".$row['sexo']."</p>";
+                    echo "<p>Ocupacion: ".$row['ocupacion']."</p>";
+                    echo "<p>Estado civil: ".$row['estado_civil']."</p>";
+                    echo "<p>Telefono: ".$row['telefono']."</p>";
+                    echo "<p>Email: ".$row['correo']."</p>";
+                    echo "<p>Dirección: ".$row['direccion']."</p>";
+                }
+                ?>
             </div>
         </div>
         <div class="grid-three-column contenedor">

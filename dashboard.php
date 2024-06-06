@@ -10,18 +10,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="Assets/css/menu.css"> <!-- Enlazar el CSS -->
+    <link rel="stylesheet" href="Assets/css/menu.css"> <!-- Enlazar el CSS -->
     <script src="menu.js"></script> <!-- Enlazar el JavaScript -->
 </head>
 
 <body>
 
-    <header class="panel">
+    <header class="panel"> 
         <div class="parte2" id="menu-container"></div> <!-- El menú se cargará aquí -->
-        <div class="textletras">                        <!--Rest in peace panel, se te va a extranar att:LE-->
-            <p class="title">Healthsync</p>
-        </div>
-    </header> 
+        <div class="textletras"> <p class="title">Healthsync</p> </div>     
+    </header>
 
     <div class="dashboard">
         <div class="profile">
@@ -72,6 +70,8 @@
                     $resultado = $conexion->query("SELECT * FROM $tabla");
                     $resultado->setFetchMode(PDO::FETCH_ASSOC); //devuelve un arreglo asociativo
 
+                    // <a href=''> <img src='https://img.icons8.com/windows/64/pin3.png' /></a>
+
                     foreach($resultado as $row) {
                         $nombres = $row['nombre'];
                         $urlExtension = "?nombres=".urlencode($nombres);
@@ -85,9 +85,9 @@
                                     </div>
                                 </div>
                             <div class='card_footer'>
-                                <a href=''> <img src='https://img.icons8.com/windows/64/pin3.png' /></a>
-                                <a href='editarDatos.html'><img src='https://img.icons8.com/pastel-glyph/64/pen--v1.png' /></a>
-                                <a href=''><img src='https://img.icons8.com/windows/64/erase.png' /></a>
+                               
+                                <a href='DatosEditar.php$urlExtension'><img src='https://img.icons8.com/pastel-glyph/64/pen--v1.png' /></a>
+                                <a href='eliminarpaciente.php$urlExtension'><img src='https://img.icons8.com/windows/64/erase.png' /></a>
                             </div>
                         </div>");
                         
