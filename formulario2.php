@@ -68,12 +68,12 @@ if (isset($_POST['cancel'])) { // el nombre del boton (submit) es cancel
         <div class="textletras"> <p class="title">Healthsync</p> </div>     
     </header>
         
-    <main>      
+    <main class="contenedor">      
         <section>
             <h2>Datos especificos</h2>
             <form action="<?php echo $_SERVER['PHP_SELF'] . $urlExtension; ?>" name="formu2" method="post" class="formulario2"> 
                 <input class="input-text" type="hidden" name="yamequieroir" value="<?php echo htmlspecialchars($nombre); ?>">      
-                <div class="contenedor-campos">
+                <div class="contenedor-campos contenedor">
                     
                     <div class="primera-division">
                         <div class="campo">
@@ -139,8 +139,10 @@ if (isset($_POST['cancel'])) { // el nombre del boton (submit) es cancel
                         </div>
                     </div>
                 </div>
-                <input type="submit" name="registro" value="enviar">
-                <input type="submit" name="cancel" value="cancelar">
+                <div class="botn">
+                <input class='botn1' type="submit" name="registro" value="enviar">
+                <input class='botn1' type="submit" name="cancel" value="cancelar">
+                </div>
             </form>
         </section>
     </main>
