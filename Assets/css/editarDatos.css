@@ -4,8 +4,7 @@
     --col_main: var(--aqua);
 }
 body {
-    margin: 0; /* Elimina el margen predeterminado */
-    padding: 0; /* Elimina el relleno predeterminado */
+    margin: 0 auto; /* Elimina el margen predeterminado */
 }
 .fira-sans-regular {
     font-family: "Fira Sans", sans-serif;
@@ -16,16 +15,14 @@ body {
     font-family: "Fira Sans", sans-serif;
     font-size: 2rem; font-weight: 500;
     background-color: var(--col_main);
-    height: 3.5rem;
+    height: 3.5rem; width: 100%;
     
     display: flex; 
     align-items: center;
-    padding: 0px 10px 0px 15px ;
     margin-bottom: 10px;
-    border: 0px solid #010101;
-    border-radius: 0px;
 
     .parte2{
+        padding: 0px 0px 0px 20px ;
         width: 15%;
         background-color: none;
     }
@@ -34,15 +31,27 @@ body {
         align-items: center;
         justify-content: center;
         .title{
-            padding-left: 10px;
+            padding-left: 0px; /*fue un pecado ponerle 10px, ahora en 0 es simetrico*/
             color: var(--text);
             text-align: center; 
             align-items: center;
         }
     }
 }
-@media (min-width:768px) {
+
+/*nota para quien vea esto:
+    Normalmente, es max-width, porque "el css normal" fuera de los MQ
+    son para computadora, dentro de los MQ deberia tener un limite *maximo*
+    para versiones inferiores a X pixeles. De no usar max-width en este caso,
+    estarias haciendo el css de fuera de los MQ como telefono por default y luego 
+    con los min-width, incrementando X cantidad de pixeles hacia fuera, como ipad, luego pc, etc.
+    😁
+*/
+
+/*tablet (creo)*/
+@media (max-width:768px) {
     .panel{
+        width: 100%;
         .parte2{
             width: 10%;
         }
@@ -50,9 +59,29 @@ body {
             width: 90%;
         }
     }
+    .contenedor-campos{
+        .cuadroTexto{width: 400px;}
+    }
 }
+/*phone*/
+@media(max-width: 440px){
+     .panel{
+        width: 100%;
+        .parte2{
+            width: 10%;
+        }
+        .textletras{
+            width: 90%;
+        }
+    }
+    .contenedor-campos{
+        .cuadroTexto{width: 100%;}
+    }
+}
+
 @media (min-width:1200px) {
     .panel{
+        width: 100%;
         .parte2{
             width: 4%;
         }

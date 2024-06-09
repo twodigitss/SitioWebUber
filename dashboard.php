@@ -64,6 +64,7 @@
                     //TODO: with perfil cliente, make it able to accept variables and paste them on the fields
                     //just like i did on dashboard
                     $host="localhost:3307"; $database="nutriologia"; 
+                    #$host="127.0.0.1:3306"; $database="nutribase"; #mio :speaking_head:
                     $tabla="datos";
 
                     $conexion = new PDO("mysql:host=$host; dbname=$database", 'root', 'root');

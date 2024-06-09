@@ -6,6 +6,7 @@
     #luis, debemos hacer un abase de datos que todos podamos usar... porque eso de modificar cada vez que alguien edita es poco profesional...
     #atentamente: el otro luis
     $host="localhost:3307"; $database="nutriologia"; 
+    #$host="127.0.0.1:3306"; $database="nutribase"; 
     $tabla="datos";
                      
     $conexion = new PDO("mysql:host=$host; dbname=$database", 'root', 'root');

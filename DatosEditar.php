@@ -2,7 +2,9 @@
 $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
 $urlExtension = "?nombres=" . urlencode($nombre);
 
-$conexion = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
+$host="localhost:3307"; $db="nutriologa";
+#host="127.0.0.1:3306"; $db="nutribase"; #si, este es mio: att enrique
+$conexion = new PDO("mysql:host=$host; dbname=$db", 'root', 'root');
 $enunciado2 = $conexion->prepare("SELECT * FROM datos WHERE nombre = ?");
 $enunciado2->bindParam(1, $nombre);
 $enunciado2->execute();
@@ -18,7 +20,7 @@ if (isset($_POST['submit'])) {
         $correo = $_POST['correo'];
         $direccion = $_POST['direccion'];
 
-        $conexion2 = new PDO('mysql:host=localhost:3307; dbname=nutriologia', 'root', 'root');
+        $conexion2 = new PDO("mysql:host=$host; dbname=$db", 'root', 'root');
         $enunciado = $conexion2->prepare("UPDATE datos SET nombre=?, edad=?, sexo=?, ocupacion=?, estado_civil=?, telefono=?, correo=?, direccion=? WHERE nombre=?");
         $enunciado->bindParam(1, $nombre2);
         $enunciado->bindParam(2, $edad);
@@ -96,7 +98,7 @@ if (isset($_POST['submit2'])) {header('Location: http://localhost/SitioWebUber/p
                 <br>
                 <input type='text' id='telefono' class='cuadroTexto' placeholder='' name='telefono' value='" . htmlspecialchars($row['telefono'], ENT_QUOTES, 'UTF-8') . "'>
             </div>
-    
+            
             <div class='casillaTexto'>
                 <label for='correo' class='label'>Correo Electrónico:</label>
                 <br>
