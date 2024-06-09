@@ -56,7 +56,7 @@ if (isset($_POST['submit2'])) {header('Location: http://localhost/SitioWebUber/p
         <div class="parte2" id="menu-container"></div>
         <div class="textletras"> <p class="title">Healthsync</p> </div>     
     </header>
-
+    <div class="contenedor-campos">
     <form action="<?php echo $_SERVER['PHP_SELF'] . $urlExtension; ?>" method="post">
         <?php
         foreach ($enunciado2 as $row) {
@@ -123,5 +123,6 @@ if (isset($_POST['submit2'])) {header('Location: http://localhost/SitioWebUber/p
         }
         ?>
     </form>
+    </div>
 </body>
 </html>
