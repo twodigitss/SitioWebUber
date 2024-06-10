@@ -107,7 +107,6 @@
                                 </div>
                             </div>       
                             ");
-                        
                     }
                 } 
                 catch (PDOException $e) {
