@@ -2,7 +2,7 @@
 $nombre = isset($_GET['nombres']) ? $_GET['nombres'] : '';
 $urlExtension = "?nombres=" . urlencode($nombre);
 
-$host="localhost:3307"; $db="nutriologa";
+$host="localhost:3307"; $db="nutriologia";
 #host="127.0.0.1:3306"; $db="nutribase"; #si, este es mio: att enrique
 $conexion = new PDO("mysql:host=$host; dbname=$db", 'root', 'root');
 $enunciado2 = $conexion->prepare("SELECT * FROM datos WHERE nombre = ?");

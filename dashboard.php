@@ -91,7 +91,6 @@
                                 <a href='eliminarpaciente.php$urlExtension'><img src='https://img.icons8.com/windows/64/erase.png' /></a>
                             </div>
                         </div>");
-                        
                     }
                 } 
                 catch (PDOException $e) {
