@@ -3,6 +3,7 @@
 :root{
     --blanco: #ffffff;
     --oscuro: #000000;
+    --blanco2: #e7e4e4;
     --primario_barra:	#689d6a;	
     --botones:	pink;
     --grisclaro:	#9a9898;
@@ -53,7 +54,7 @@ body{
         justify-content: center;
         .title{
             padding-left: 10px;
-            color: var(--text);
+            color: var(--blanco2);
             text-align: center; 
             align-items: center;
         }

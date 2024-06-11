@@ -1,5 +1,6 @@
 :root{
     --text: #010101;  
+    --blanco: #e7e4e4;
     --aqua: #689d6a;
     --col_main: var(--aqua);
 }
@@ -53,7 +54,7 @@
         justify-content: center;
         .title{
             padding-left: 10px;
-            color: var(--text);
+            color: var(--blanco);
             text-align: center; 
             align-items: center;
         }

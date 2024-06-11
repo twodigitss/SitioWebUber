@@ -1,6 +1,7 @@
 :root{
     /*DEFAULT TWEAKS*/
     --BGwhite: #f1f1f1;
+    --blanco: #e7e4e4;
     --FGwhite: #fafafa;
     --text: #010101;  
     /*MOUNTAIN COLORSCHEME*/
@@ -56,7 +57,7 @@ body{
         justify-content: center;
         .title{
             padding-left: 10px;
-            color: var(--text);
+            color: var(--blanco);
             text-align: center; 
             align-items: center;
         }
