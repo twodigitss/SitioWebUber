@@ -1,223 +1,236 @@
-:root{
+:root {
     --text: #010101;  
     --aqua: #689d6a;
     --col_main: var(--aqua);
     --blanco: #e7e4e4;
 }
+
 body {
     margin: 0 auto; /* Elimina el margen predeterminado */
 }
+
 .fira-sans-regular {
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-} 
-.panel{
+}
+
+.panel {
     font-family: "Fira Sans", sans-serif;
-    font-size: 2rem; font-weight: 500;
+    font-size: 2rem;
+    font-weight: 500;
     background-color: var(--col_main);
-    height: 3.5rem; width: 100%;
-    
+    height: 3.5rem;
+    width: 100%;
     display: flex; 
     align-items: center;
     margin-bottom: 10px;
-
-    .parte2{
-        padding: 0px 0px 0px 20px ;
-        width: 15%;
-        background-color: none;
-    }
-    .textletras{
-        width: 85%;
-        align-items: center;
-        justify-content: center;
-        .title{
-            padding-left: 0px; /*fue un pecado ponerle 10px, ahora en 0 es simetrico*/
-            color: var(--blanco);
-            text-align: center; 
-            align-items: center;
-        }
-    }
 }
 
-/*nota para quien vea esto:
-    Normalmente, es max-width, porque "el css normal" fuera de los MQ
-    son para computadora, dentro de los MQ deberia tener un limite *maximo*
-    para versiones inferiores a X pixeles. De no usar max-width en este caso,
-    estarias haciendo el css de fuera de los MQ como telefono por default y luego 
-    con los min-width, incrementando X cantidad de pixeles hacia fuera, como ipad, luego pc, etc.
-    😁
-*/
+.panel .parte2 {
+    padding: 0px 0px 0px 20px;
+    width: 15%;
+    background-color: none;
+}
 
-/*tablet (creo)*/
+.panel .textletras {
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel .textletras .title {
+    padding-left: 0px; /* Fue un pecado ponerle 10px, ahora en 0 es simétrico */
+    color: var(--blanco);
+    text-align: center; 
+    align-items: center;
+}
+
 @media (max-width:768px) {
-    .panel{
+    .panel {
         width: 100%;
-        .parte2{
-            width: 10%;
-        }
-        .textletras{
-            width: 90%;
-        }
     }
-    .contenedor-campos{
-        .cuadroTexto{width: 400px;}
+    
+    .panel .parte2 {
+        width: 10%;
+    }
+    
+    .panel .textletras {
+        width: 90%;
+    }
+
+    .contenedor-campos .cuadroTexto {
+        width: 100%;
     }
 }
-/*phone*/
-@media(max-width: 440px){
-     .panel{
+
+@media(max-width: 440px) {
+    .panel {
         width: 100%;
-        .parte2{
-            width: 10%;
-        }
-        .textletras{
-            width: 90%;
-        }
     }
-    .contenedor-campos{
-        .cuadroTexto{width: 100%;}
+    
+    .panel .parte2 {
+        width: 10%;
+    }
+    
+    .panel .textletras {
+        width: 90%;
+    }
+
+    .contenedor-campos .cuadroTexto {
+        width: 100%;
     }
 }
 
 @media (min-width:1200px) {
-    .panel{
+    .panel {
         width: 100%;
-        .parte2{
-            width: 4%;
-        }
-        .textletras{
-            width: 90%;
-        }
+    }
+    
+    .panel .parte2 {
+        width: 4%;
+    }
+    
+    .panel .textletras {
+        width: 90%;
     }
 }
-.contenedor-campos{
-    display: flex;
+
+.giro{
+    display: grid;
+    place-items: center;
     width: 100%; height: 100%;
-    justify-content: center;
+    margin: 0px 0px 50px 0px ;
+}
+@media (min-width: 768px) {
+    .giro {
+        width: 100%;
+        margin: 0px 0px 50px 0px ;
+    }
+}
+
+.contenedor-campos {
+    display: flex;
+    width: 70%;
     font-size: 20px;
+    
+    padding: 30px 0px 30px 0px ;
+    
+    border-radius: 15px; 
+    background-color: #fdfdfd;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.3); /* Add shadow */
+    margin-top: 2rem;
+    justify-content: center;
+    justify-items: center;
     text-align: left;
-    .editar-datos {
-        font-size: 25px; /* Tamaño del texto */
-        text-align: none; /* Alineación horizontal del texto */
-        margin-top: 20px; /* Espacio entre el texto y el rectángulo */
-    }
-    .casillaTexto {
-        text-align: none; /* Alineación horizontal del contenido */
-        margin-top: 10px; /* Espacio entre el texto y el campo de entrada */
-    }
+}
+
+.contenedor-campos .editar-datos {
+    font-size: 25px;
+    text-align: none;
+    margin-top: 20px;
+}
+
+.contenedor-campos .casillaTexto {
+    text-align: none;
+    margin-top: 10px;
 }
 
 .cuadro {
-    width: 100%; /* Ancho completo del contenedor */
-    height: 50px; /* Altura del rectángulo */
-    background-color: #24b348; /* Color de fondo verde */
-    color: white; /* Color del texto */
-    font-size: 30px; /* Tamaño de la fuente */
-    line-height: 50px; /* Alineación vertical del texto */
-    text-align: center; /* Alineación horizontal del texto */
+    width: 100%;
+    height: 50px;
+    background-color: #24b348;
+    color: white;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
 }
 
 .titulo {
-    display: inline-block; /* Para que el ancho del contenedor se ajuste al texto */
-    margin-top:0px; /* Espacio entre el texto y el borde superior del cuadro */
-    text-align: center; /* Alineación horizontal del texto */
+    display: inline-block;
+    margin-top: 0px;
+    text-align: center;
 }
 
-
-
-
 .label {
-    font-size: 20px; /* Tamaño del texto */
-    text-align: center; /* Alineación horizontal del texto */
-    
+    font-size: 20px;
+    text-align: center;
 }
 
 .cuadroTexto {
-    width: 600px; /* Ancho del campo de entrada */
-    height: 30px; /* Altura del campo de entrada */
-    font-size: 16px; /* Tamaño del texto */
+    width: 600px;
+    height: 30px;
+    font-size: 16px;
 }
 
-
-.grid3{
+.grid3 {
     display: grid;
     grid-template-rows: 2;
     margin: 0 auto;
     margin-right: 1rem;
-}   
+}
 
-
-.grid4{
+.grid4 {
     display: grid;
     grid-template-rows: 2;
     margin: 0 auto;
     margin-left: 1rem;
 }
 
-/* Estilos para las etiquetas "Edad" y "Sexo" */
 .contenedor label {
-    display: inline-block; /* Para que estén en la misma línea */
-    width: 100px; /* Ancho fijo para las etiquetas */
-    text-align: center; /* Alinear el texto a la derecha */
+    display: inline-block;
+    width: 100px;
+    text-align: center;
 }
 
-/* Estilos para las casillas de respuesta */
 .contenedor input[type="text"],
 .contenedor select {
-    width: 150px; /* Ancho fijo para las casillas */
-    margin-top: 5px; /* Espacio superior */
+    width: 150px;
+    margin-top: 5px;
 }
 
-/* Estilos para el salto de página */
 .contenedor br {
-    display: block; /* Forzar el salto de línea */
-    margin-top: 10px; /* Espacio entre líneas */
+    display: block;
+    margin-top: 10px;
 }
 
 .casillaEstado {
-    text-align: center; /* Alineación horizontal del contenido */
-    margin-top: 10px; /* Espacio entre el texto y el campo de entrada */
+    text-align: center;
+    margin-top: 10px;
 }
 
-.seleccion{
-    text-align: center; /* Alineación horizontal del contenido */
+.seleccion {
+    text-align: center;
 }
 
-.contenedorBotones{
+.contenedorBotones {
     display: flex;
     justify-content: center; 
 }
 
-
-/* Estilos para los botones */
 .boton-finalizar,
 .boton-cancelar {
-    padding: 10px 20px; /* Padding interno */
-    margin: 0 10px; /* Margen entre botones */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Estilos para el botón "Finalizar" */
 .boton-finalizar {
-    background-color: #28a745; /* Color de fondo verde */
-    color: black; /* Color del texto */
-    border: none; /* Sin borde */
-    transition: background-color 0.3s; /* Transición suave */
+    background-color: #28a745;
+    color: black;
+    border: none;
+    transition: background-color 0.3s;
 }
 
-/* Estilos para el botón "Cancelar" */
 .boton-cancelar {
-    background-color: #dc3545; /* Color de fondo rojo */
-    color: black; /* Color del texto */
-    border: none; /* Sin borde */
-    transition: background-color 0.3s; /* Transición suave */
-
+    background-color: #dc3545;
+    color: black;
+    border: none;
+    transition: background-color 0.3s;
 }
 
-/* Efecto de oscurecimiento al pasar el cursor sobre los botones */
 .boton-finalizar:hover,
 .boton-cancelar:hover {
-    filter: brightness(90%); /* Reduce el brillo al 90% */
+    filter: brightness(90%);
 }
