@@ -186,7 +186,8 @@ section{
     }
     .contenedor-campos {
         font-size: 18px;
-        padding-bottom: 400px;
+        /*nota: un margen mas grande que 100 es peligroso eh...*/
+        padding-bottom: 40px;
     }
     .botones a {
         width: 13rem;
@@ -194,6 +195,7 @@ section{
     }
     section {
         width: 100%;
+        margin: 0px 0px 50px 0px ;
     }
 }
 
@@ -211,7 +213,8 @@ section{
     }
     .contenedor-campos {
         font-size: 16px;
-        padding-bottom: 300px;
+        /*lo que dije aplica para este tambien... xD*/
+        padding-bottom: 30px;
     }
     .botones {
         flex-direction: column;
@@ -223,5 +226,6 @@ section{
     }
     section {
         width: 100%;
+        margin: 0px 0px 50px 0px ;
     }
 }
