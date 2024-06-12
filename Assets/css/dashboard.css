@@ -63,7 +63,7 @@ body{
         }
     }
 }
-@media (min-width:768px) {
+@media (max-width:768px) {
     .panel{
         .parte2{
             width: 10%;
@@ -71,6 +71,9 @@ body{
         .textletras{
             width: 90%;
         }
+    }
+    .dashboard{
+        .profile{ display:none; }
     }
 }
 @media (min-width:1200px) {
