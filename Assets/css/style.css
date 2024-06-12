@@ -6,7 +6,7 @@
     --grisclaro:	#727272;
     --rosaClaro: #895486;
     --text: #010101;  
-    --aqua: #689d6a;
+    --aqua: #326734;
     --col_main: var(--aqua);
 }
 .fira-sans-regular {
@@ -37,7 +37,7 @@ body{
         justify-content: center;
         .title{
             padding-left: 10px;
-            color: var(--text);
+            color: var(--blanco);
             text-align: center; 
             align-items: center;
         }

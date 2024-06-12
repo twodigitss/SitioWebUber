@@ -2,6 +2,7 @@
 
 :root{
     --blanco: #ffffff;
+    --blanco2: #e7e4e4;
     --oscuro: #000000;
     --primario_barra:	#689d6a;	
     --botones:	pink;
@@ -54,7 +55,7 @@ body{
         justify-content: center;
         .title{
             padding-left: 10px;
-            color: var(--text);
+            color: var(--blanco2);
             text-align: center; 
             align-items: center;
         }
